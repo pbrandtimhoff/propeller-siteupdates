@@ -7,6 +7,7 @@
 </head>
 <body>
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
 <style id="site-css">
 :root { --blue: #007bff; --indigo: #6610f2; --purple: #6f42c1; --pink: #e83e8c; --red: #dc3545; --orange: #fd7e14; --yellow: #ffc107; --green: #28a745; --teal: #20c997; --cyan: #17a2b8; --white: #fff; --gray: #6c757d; --gray-dark: #343a40; --primary: #007bff; --secondary: #6c757d; --success: #28a745; --info: #17a2b8; --warning: #ffc107; --danger: #dc3545; --light: #f8f9fa; --dark: #343a40; --breakpoint-xs: 0; --breakpoint-sm: 576px; --breakpoint-md: 768px; --breakpoint-lg: 992px; --breakpoint-xl: 1200px; --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
@@ -1376,6 +1377,158 @@ html body.visitor-homepage .hp-footer .hp-bold-state{color:#5107A0!important;}
 }
 @media (min-width:1001px){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-act>.hw-head{align-self:center!important;}}
 @media (min-width:1001px){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-stack>.hw-causes{align-self:center!important;}}
+/* swap card colors: Reproductive Rights <-> Psychedelic Education */
+:is(#hb,body.visitor-homepage) .hw.flow .hw-causes .hw-cause:nth-child(5){background:#B6F5FF!important;--sh:#5FE9FD!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-causes .hw-cause:nth-child(8){background:#CE9FFF!important;--sh:#983DFF!important;}
+/* rewards step: images + labels, no containers */
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-rwimgs{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(18px,2.4vh,30px) clamp(14px,2vw,30px);width:min(100%,880px);margin-top:clamp(16px,3vh,32px);}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi{flex:0 0 calc((100% - 3 * clamp(14px,2vw,30px)) / 4);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;opacity:0;scale:.4;rotate:calc((var(--i) - 3) * 3deg);transition:opacity .25s ease,scale .55s cubic-bezier(.34,1.7,.64,1),rotate .55s cubic-bezier(.34,1.7,.64,1),transform .3s cubic-bezier(.34,1.6,.64,1);}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi.show{opacity:1;scale:1;rotate:0deg;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-img{display:flex;align-items:center;justify-content:center;width:100%;height:clamp(110px,19vh,180px);}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:none;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-ico .rwi-img img{max-width:92%;max-height:88%;width:92%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-l{font-family:'Space Mono',ui-monospace,monospace;font-weight:700;font-size:clamp(12px,1.05vw,15px);line-height:1.25;letter-spacing:1px;text-transform:uppercase;color:#FEFFF5;text-shadow:2px 2px 0 #260E41;text-wrap:balance;}
+@media (hover:hover){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:hover{transform:scale(1.07) rotate(-2.5deg);}:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(even):hover{transform:scale(1.07) rotate(2.5deg);}}
+@media (min-width:1001px){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-rw>.hw-rwimgs{grid-row:1;justify-self:center;}}
+@media (max-width:760px){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-rwimgs{gap:16px 10px;width:100%;}:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi{flex-basis:calc((100% - 20px) / 3);gap:6px;}:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-img{height:clamp(84px,12vh,110px);}:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-l{font-size:10px;letter-spacing:.4px;}}
+@media (prefers-reduced-motion:reduce){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi{transition:none;opacity:1;scale:1;rotate:0deg;}}
+/* rewards: bigger, scattered collage, pill labels overlapping the images */
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-rwimgs{display:block!important;position:relative;width:100%!important;height:clamp(460px,66vh,640px);margin-top:clamp(10px,2vh,24px);}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);display:block!important;flex:none!important;rotate:var(--r)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:not(.show){rotate:calc(var(--r) * 3)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-img{position:absolute;inset:0;width:100%!important;height:100%!important;display:flex;align-items:center;justify-content:center;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi .rwi-img img,:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-ico .rwi-img img{width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-l{position:absolute;left:50%;bottom:-4%;translate:-50% 0;z-index:2;max-width:115%;width:max-content;padding:7px 14px 6px;background:var(--pc);color:#260E41!important;text-shadow:none!important;border:2px solid #260E41;border-radius:999px;font-size:clamp(12px,1vw,15px)!important;letter-spacing:.8px!important;line-height:1.2!important;text-align:center;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:hover{z-index:5;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(1){--x:0%;--y:2%;--w:30%;--h:32%;--r:-6deg;--pc:#B6F5FF;z-index:1;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(2){--x:30%;--y:0%;--w:30%;--h:30%;--r:5deg;--pc:#FFADDF;z-index:2;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(3){--x:57%;--y:3%;--w:43%;--h:33%;--r:-3deg;--pc:#F6FFB3;z-index:3;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(4){--x:1%;--y:35%;--w:37%;--h:38%;--r:4deg;--pc:#A4F6BE;z-index:1;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(5){--x:34%;--y:30%;--w:33%;--h:41%;--r:-4deg;--pc:#FCCB81;z-index:2;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(6){--x:65%;--y:38%;--w:34%;--h:40%;--r:6deg;--pc:#CE9FFF;z-index:3;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(7){--x:40%;--y:69%;--w:22%;--h:29%;--r:-5deg;--pc:#FFB8A5;z-index:1;}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-rwimgs{height:clamp(460px,66svh,600px);margin-top:6px;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-l{font-size:9.5px!important;padding:4px 8px 3px;letter-spacing:.3px!important;max-width:120%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(1){--x:0%;--y:0%;--w:48%;--h:22%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(2){--x:50%;--y:1%;--w:50%;--h:20%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(3){--x:2%;--y:23%;--w:60%;--h:22%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(4){--x:56%;--y:25%;--w:44%;--h:24%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(5){--x:0%;--y:49%;--w:52%;--h:27%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(6){--x:48%;--y:51%;--w:50%;--h:27%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(7){--x:30%;--y:77%;--w:40%;--h:22%;}
+}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi .rwi-img img,:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi-ico .rwi-img img{width:100%!important;height:100%!important;object-fit:contain;}
+@media (min-width:761px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(1){--x:0%;--y:0%;--w:30%;--h:30%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(2){--x:29%;--y:2%;--w:28%;--h:26%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(3){--x:56%;--y:0%;--w:44%;--h:34%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(4){--x:0%;--y:34%;--w:36%;--h:38%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(5){--x:34%;--y:31%;--w:32%;--h:40%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(6){--x:66%;--y:36%;--w:33%;--h:40%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(7){--x:41%;--y:77%;--w:20%;--h:23%;}
+}
+@media (min-width:761px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(1){--x:0%;--y:3%;--w:31%;--h:36%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(2){--x:29%;--y:5%;--w:29%;--h:32%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(3){--x:57%;--y:0%;--w:43%;--h:42%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(4){--x:2%;--y:44%;--w:36%;--h:46%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(5){--x:35%;--y:42%;--w:32%;--h:52%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(6){--x:66%;--y:46%;--w:33%;--h:48%;}
+}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(1){--x:0%;--y:0%;--w:48%;--h:26%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(2){--x:50%;--y:2%;--w:50%;--h:24%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(3){--x:2%;--y:27%;--w:60%;--h:26%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(4){--x:56%;--y:30%;--w:44%;--h:28%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(5){--x:0%;--y:58%;--w:52%;--h:32%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rwi:nth-child(6){--x:48%;--y:60%;--w:50%;--h:32%;}
+}
+/* rewards collage v2: photo stickers, colored pill labels, Premier rolls in underneath */
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2{height:clamp(520px,74vh,700px)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi-l{left:auto!important;bottom:auto!important;right:var(--lx);top:auto;bottom:var(--ly)!important;translate:none!important;rotate:-3deg;font-family:Inter,-apple-system,'Segoe UI',sans-serif!important;font-weight:800!important;font-size:clamp(13px,1.15vw,18px)!important;letter-spacing:.3px!important;padding:8px 18px 7px!important;line-height:1.15!important;max-width:none!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi-img img{filter:none!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:clamp(12px,1.4vw,22px);}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-b{width:clamp(64px,6.5vw,96px);aspect-ratio:1;transform:translateX(-60vw) rotate(-720deg);opacity:0;transition:transform 1s cubic-bezier(.2,.75,.25,1.08),opacity .2s ease;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-b img{width:100%;height:100%;display:block;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-t{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(26px,2.6vw,42px);line-height:1;background:linear-gradient(90deg,#80F4A8 0%,#FF6D48 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(3px 3px 0 #260E41);opacity:0;translate:30px 0;transition:opacity .5s ease .7s,translate .7s cubic-bezier(.22,1,.36,1) .7s;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2.prem-in .rw-prem-b{transform:none;opacity:1;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2.prem-in .rw-prem-t{opacity:1;translate:0 0;}
+@media (prefers-reduced-motion:reduce){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-b,:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-t{transition:none;transform:none;opacity:1;translate:none;}}
+@media (min-width:761px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(1){--x:0%;--y:2%;--w:37%;--h:40%;--r:-3deg;--lx:0%;--ly:12%;--pc:#B6F5FF;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(2){--x:38%;--y:4%;--w:31%;--h:36%;--r:0deg;--lx:0%;--ly:40%;--pc:#FFADDF;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(3){--x:70%;--y:0%;--w:30%;--h:42%;--r:4deg;--lx:-6%;--ly:22%;--pc:#A4F6BE;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(4){--x:5%;--y:46%;--w:25%;--h:40%;--r:-6deg;--lx:0%;--ly:48%;--pc:#FCCB81;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(5){--x:34%;--y:47%;--w:25%;--h:40%;--r:0deg;--lx:0%;--ly:16%;--pc:#F6FFB3;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(6){--x:61%;--y:55%;--w:37%;--h:27%;--r:-8deg;--lx:-6%;--ly:0%;--pc:#CE9FFF;}
+}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2{height:clamp(560px,78svh,700px)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi-l{font-size:10.5px!important;padding:5px 10px 4px!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-t{font-size:22px;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-b{width:58px;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(1){--x:0%;--y:0%;--w:52%;--h:21%;--r:-3deg;--lx:0%;--ly:6%;--pc:#B6F5FF;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(2){--x:50%;--y:3%;--w:50%;--h:17%;--r:0deg;--lx:0%;--ly:30%;--pc:#FFADDF;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(3){--x:2%;--y:23%;--w:46%;--h:22%;--r:4deg;--lx:0%;--ly:10%;--pc:#A4F6BE;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(4){--x:52%;--y:23%;--w:42%;--h:23%;--r:-6deg;--lx:0%;--ly:30%;--pc:#FCCB81;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(5){--x:4%;--y:48%;--w:42%;--h:22%;--r:0deg;--lx:0%;--ly:8%;--pc:#F6FFB3;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(6){--x:46%;--y:52%;--w:54%;--h:15%;--r:-8deg;--lx:0%;--ly:0%;--pc:#CE9FFF;}
+}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-t{white-space:nowrap;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem{bottom:-2%;}
+@media (max-width:760px){:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2{height:clamp(540px,72svh,640px)!important;}:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem{bottom:0;}:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rw-prem-t{white-space:normal;max-width:230px;text-align:left;font-size:21px;}}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(1){--x:0%;--y:0%;--w:54%;--h:25%;--r:-3deg;--ly:6%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(2){--x:48%;--y:4%;--w:52%;--h:21%;--r:0deg;--ly:30%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(3){--x:2%;--y:28%;--w:48%;--h:26%;--r:4deg;--ly:10%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(4){--x:52%;--y:28%;--w:44%;--h:27%;--r:-6deg;--ly:30%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(5){--x:4%;--y:57%;--w:42%;--h:26%;--r:0deg;--ly:8%;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(6){--x:44%;--y:62%;--w:56%;--h:18%;--r:-8deg;--ly:0%;}
+}
+@media (max-width:760px){:is(#hb,body.visitor-homepage) .hp-top-content .hp-cta-container{align-items:center!important;}:is(#hb,body.visitor-homepage) .hp-top-content .hp-cta-container .hp-cta-primary{width:auto!important;max-width:none!important;align-self:center!important;padding:18px!important;line-height:1!important;}}
+/* mobile causes: real heading height so the block centers in the window */
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-act.causes .ta-a{position:absolute!important;top:0;left:0;right:0;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-act.causes .ta-b{position:relative!important;font-size:clamp(34px,10vw,42px)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-act.causes .hw-stack{margin-top:14px!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-causes{gap:10px!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-causes .hw-ico{aspect-ratio:1/1.02!important;}
+}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .hw-act.causes .hw-acts{position:absolute!important;inset:0 0 auto 0;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-scenes .rw2 .rwi:nth-child(1){z-index:6!important;}
+}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hp-experiences,:is(#hb,body.visitor-homepage) .hp-rewards,:is(#hb,body.visitor-homepage) .hp-winner-blogs{padding-top:48px!important;padding-bottom:48px!important;}
+:is(#hb,body.visitor-homepage) .hp-experiences .ex-featuredWrapper{padding-bottom:0!important;margin-bottom:0!important;}
+:is(#hb,body.visitor-homepage) :is(.hp-experiences,.hp-rewards)>.lo-btnrow.lo-btnrow{margin-top:8px!important;}
+:is(#hb,body.visitor-homepage) .hp-winner-blogs .hb-win>.lo-btnrow.lo-btnrow{margin-top:-8px!important;}
+:is(#hb,body.visitor-homepage) .hp-experiences>.ex-featuredWrapper.ex-featuredWrapper,:is(#hb,body.visitor-homepage) .hp-rewards>.featuredActionsWrapper.featuredActionsWrapper{margin-top:8px!important;}
+:is(#hb,body.visitor-homepage) .hp-winner-blogs .hb-win>.hb-shelfwrap.hb-shelfwrap{margin-top:-4px!important;}
+}
+/* Join Premier: stylized gradient text (matches rewards Premier row), no starburst */
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star svg{display:none!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star{width:max-content!important;aspect-ratio:auto!important;rotate:0deg!important;translate:0 -50%!important;display:block!important;transform:translateX(30px)!important;transition:opacity .5s ease,transform .7s cubic-bezier(.22,1,.36,1)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star.on{transform:none!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star span{display:block;width:auto!important;max-width:clamp(140px,11vw,200px);text-align:left!important;font-family:Oswald,'Arial Narrow',sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(21px,1.95vw,32px)!important;line-height:1!important;background:linear-gradient(90deg,#80F4A8 0%,#FF6D48 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;filter:drop-shadow(3px 3px 0 #260E41);}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star{translate:none!important;margin-left:-23px!important;top:calc(100% + 84px + 46px)!important;transform:translate(30px,-50%)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star.on{transform:translateY(-50%)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star span{max-width:170px;font-size:20px!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-badge{margin-left:-137px!important;}
+}
+@media (prefers-reduced-motion:reduce){:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star{transition:opacity .2s!important;}}
+/* Earn Premier badge matches the rewards Premier badge: size, roll-in, no tilt */
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-badge{width:clamp(64px,6.5vw,96px)!important;right:calc(100% + clamp(12px,1.4vw,22px))!important;rotate:0deg!important;filter:none!important;transform:translateX(-60vw) rotate(-720deg)!important;transition:transform 1s cubic-bezier(.2,.75,.25,1.08),opacity .2s ease!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-badge.on{transform:none!important;}
+@media (max-width:760px){
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-badge{width:58px!important;right:auto!important;margin-left:-120px!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star{margin-left:-50px!important;top:calc(100% + 84px + 29px)!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-star span{font-size:21px!important;}
+:is(#hb,body.visitor-homepage) .hw.flow .hw-odo{margin-bottom:120px!important;}
+}
+@media (prefers-reduced-motion:reduce){:is(#hb,body.visitor-homepage) .hw.flow .hw-slap-badge{transform:none!important;transition:opacity .2s!important;}}
 /* coin burst layer */
 .hw-burst{position:fixed;inset:0;z-index:999;pointer-events:none;overflow:hidden;}
 .hw-burst img{position:absolute;left:0;top:0;width:var(--s);height:auto;will-change:transform;filter:drop-shadow(2px 3px 0 rgba(38,14,65,.35));}
@@ -1527,7 +1680,7 @@ html body.visitor-homepage .hp-footer .hp-bold-state{color:#5107A0!important;}
 <p>Redeem points for concert tickets, exclusive merch, VIP experiences, and more.</p>
 </div>
 </div>
-<div class="hw"><div class="hw-hero"><div class="hw-hero-in"><h2 class="hw-h1">How it works</h2></div></div><div class="hw-scenes"><section class="hw-scene hw-act"><div class="hw-head"><h3 class="hw-sh"><span class="ta ta-a">Take action</span><span class="ta ta-b">For causes you care about</span></h3></div><div class="hw-stack"><div class="hw-grid hw-acts"><div class="hw-ico" data-pts="125"><img src="assets/icon-petition.svg" alt=""><span>Sign petitions</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-tree.svg" alt=""><span>Plant a tree</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-donate.svg" alt=""><span>Donate</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-vote.svg" alt=""><span>Register to vote</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-club.svg" alt=""><span>Join a club</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-learn.svg" alt=""><span>Learn</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-monthly.svg" alt=""><span>Give monthly</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-watch.svg" alt=""><span>Watch</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-share.svg" alt=""><span>Share</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-follow.svg" alt=""><span>Follow</span></div></div><div class="hw-grid hw-causes" aria-label="Causes"><div class="hw-ico hw-cause has-ico"><img src="assets/cause-climate.svg" alt=""><span>Environment &amp; Climate Action</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-mental.svg" alt=""><span>Mental Health</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-justice.svg" alt=""><span>Racial &amp; Social Justice</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-pride.svg" alt=""><span>LGBTQ+ Equality &amp; Pride</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-reproductive.svg" alt=""><span>Reproductive Rights &amp; Choice</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-arts.svg" alt=""><span>Education &amp; Music Arts</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-community.svg" alt=""><span>Community &amp; Animals</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-psychedelic.svg" alt=""><span>Psychedelic Education &amp; Safety</span></div></div></div></section><section class="hw-scene hw-earn"><h3 class="hw-sh" style="text-wrap:balance;text-align:center">Completed actions earn you points</h3><p class="hw-p">More impact = more points.</p><div class="hw-earn-card"><div class="hw-odo"><span class="hw-odo-n" data-out="">0</span><span class="hw-odo-l" data-label="">demo points from 0 actions</span></div><div class="hw-prem"><span class="hw-prem-ico"><svg aria-hidden="true" class="premier-badge" viewbox="0 0 77.145 77.144" xmlns="http://www.w3.org/2000/svg"><g><path d="M76.145,38.572C76.145,17.854,59.29,1,38.572,1S1,17.854,1,38.572s16.854,37.572,37.572,37.572S76.145,59.289,76.145,38.572z M38.572,72.272c-18.582,0-33.7-15.118-33.7-33.7c0-18.582,15.118-33.7,33.7-33.7s33.7,15.118,33.7,33.7C72.272,57.154,57.154,72.272,38.572,72.272z" fill="#80F4A8"></path><path d="M38.572,0C17.304,0,0,17.303,0,38.572c0,21.269,17.304,38.572,38.572,38.572s38.572-17.303,38.572-38.572C77.145,17.303,59.841,0,38.572,0z M1,38.572C1,17.854,17.854,1,38.572,1s37.572,16.854,37.572,37.572S59.29,76.144,38.572,76.144S1,59.289,1,38.572z" fill="#260E41"></path><path d="M71.272,38.572c0-18.031-14.669-32.7-32.7-32.7s-32.7,14.669-32.7,32.7s14.669,32.7,32.7,32.7S71.272,56.603,71.272,38.572z" fill="#FF6D48"></path><path d="M38.572,4.872c-18.582,0-33.7,15.118-33.7,33.7c0,18.583,15.118,33.7,33.7,33.7s33.7-15.118,33.7-33.7C72.272,19.99,57.154,4.872,38.572,4.872z M5.872,38.572c0-18.031,14.669-32.7,32.7-32.7s32.7,14.669,32.7,32.7s-14.669,32.7-32.7,32.7S5.872,56.603,5.872,38.572z" fill="#260E41"></path><g><path d="M23.168,57.946c0.603,0.521,1.232,1.011,1.885,1.47l13.354-7.112l13.844,7.15c0.659-0.46,1.293-0.953,1.901-1.476l-15.252-7.877c-0.157-0.081-0.328-0.121-0.5-0.121c-0.177,0-0.353,0.043-0.514,0.128L23.168,57.946z" fill="#F6FFB3"></path><path d="M54.612,57.089L39.36,49.212c-0.295-0.152-0.626-0.233-0.959-0.233c-0.34,0-0.68,0.084-0.981,0.243l-14.721,7.84c-0.291,0.155-0.487,0.444-0.524,0.771s0.09,0.652,0.34,0.868c0.625,0.54,1.286,1.056,1.964,1.532c0.172,0.12,0.373,0.182,0.575,0.182c0.161,0,0.323-0.039,0.47-0.117l12.891-6.865l13.378,6.909c0.145,0.075,0.302,0.111,0.459,0.111c0.201,0,0.402-0.061,0.573-0.18c0.682-0.477,1.349-0.994,1.981-1.538c0.252-0.217,0.38-0.545,0.341-0.875C55.107,57.531,54.907,57.242,54.612,57.089z M38.901,50.101l15.252,7.877c-0.608,0.523-1.242,1.016-1.901,1.476l-13.844-7.15l-13.354,7.112c-0.653-0.459-1.283-0.95-1.885-1.47l14.718-7.838c0.161-0.085,0.338-0.128,0.514-0.128C38.573,49.98,38.744,50.02,38.901,50.101z" fill="#260E41"></path><path d="M18.33,52.203l20.225-10.455L58.97,52.3c0.378-0.62,0.727-1.26,1.047-1.916l-20.37-10.53V16.266c-0.321-0.013-0.644-0.02-0.968-0.02c-0.408,0-0.813,0.01-1.216,0.031v23.578L17.291,50.282C17.608,50.94,17.956,51.58,18.33,52.203z" fill="#F6FFB3"></path><path d="M60.477,49.496l-19.83-10.251v-22.98c0-0.537-0.424-0.978-0.96-0.999c-0.334-0.013-0.67-0.02-1.008-0.02c-0.425,0-0.847,0.011-1.266,0.032c-0.532,0.027-0.95,0.466-0.95,0.999v22.969L16.832,49.394c-0.481,0.249-0.677,0.835-0.442,1.323c0.327,0.677,0.691,1.35,1.083,2.001c0.187,0.31,0.517,0.484,0.858,0.484c0.155,0,0.312-0.036,0.458-0.112l19.766-10.218l19.955,10.316c0.146,0.076,0.304,0.112,0.458,0.112c0.339,0,0.668-0.172,0.855-0.48c0.392-0.644,0.759-1.316,1.092-1.997C61.155,50.335,60.959,49.746,60.477,49.496z M37.464,16.277c0.403-0.02,0.808-0.031,1.216-0.031c0.324,0,0.647,0.007,0.968,0.02v23.589l20.37,10.53c-0.32,0.656-0.67,1.295-1.047,1.916L38.555,41.747L18.33,52.203c-0.374-0.622-0.722-1.263-1.039-1.92l20.172-10.428V16.277z" fill="#260E41"></path><path d="M15.304,44.115l14.274-6.938c0.376-0.183,0.615-0.564,0.615-0.982V17.808c-0.747,0.286-1.475,0.609-2.183,0.966v16.737l-12.994,6.316C15.075,42.601,15.172,43.364,15.304,44.115z" fill="#F6FFB3"></path><path d="M31.193,36.195V17.808c0-0.329-0.162-0.637-0.433-0.824c-0.169-0.116-0.367-0.176-0.567-0.176c-0.121,0-0.242,0.022-0.358,0.066c-0.771,0.295-1.536,0.634-2.276,1.007c-0.337,0.17-0.55,0.515-0.55,0.893v16.112l-12.431,6.043c-0.369,0.18-0.591,0.567-0.56,0.976c0.061,0.796,0.162,1.598,0.301,2.384c0.054,0.309,0.251,0.575,0.53,0.717c0.143,0.073,0.299,0.109,0.455,0.109c0.15,0,0.299-0.034,0.437-0.101l14.274-6.938C30.731,37.728,31.193,36.99,31.193,36.195z M28.01,18.774c0.708-0.357,1.437-0.68,2.183-0.966v18.387c0,0.418-0.239,0.799-0.615,0.982l-14.274,6.938c-0.132-0.751-0.229-1.514-0.288-2.287l12.994-6.316V18.774z" fill="#260E41"></path><polygon fill="#F6FFB3" points="60.413,23.486 58.453,23.486 58.453,26.519 55.419,26.519 55.419,28.48 58.453,28.48 58.453,31.513 60.413,31.513 60.413,28.48 63.447,28.48 63.447,26.519 60.413,26.519"></polygon><path d="M63.447,25.519h-2.033v-2.034c0-0.552-0.448-1-1-1h-1.961c-0.552,0-1,0.448-1,1v2.034h-2.033c-0.552,0-1,0.448-1,1v1.96c0,0.552,0.448,1,1,1h2.033v2.033c0,0.552,0.448,1,1,1h1.961c0.552,0,1-0.448,1-1V29.48h2.033c0.552,0,1-0.448,1-1v-1.96C64.447,25.967,63.999,25.519,63.447,25.519z M63.447,28.48h-3.033v3.033h-1.961V28.48h-3.033v-1.96h3.033v-3.034h1.961v3.034h3.033V28.48z" fill="#260E41"></path><path d="M48.037,37.177L62.074,44c0.129-0.753,0.221-1.518,0.277-2.293l-12.746-6.196V18.905c-0.708-0.368-1.436-0.701-2.183-0.997v18.287C47.422,36.613,47.661,36.994,48.037,37.177z" fill="#F6FFB3"></path><path d="M62.789,40.808l-12.183-5.922V18.905c0-0.373-0.208-0.715-0.539-0.887c-0.739-0.384-1.505-0.734-2.276-1.039c-0.119-0.047-0.244-0.07-0.368-0.07c-0.198,0-0.394,0.059-0.562,0.173c-0.274,0.186-0.438,0.496-0.438,0.827v18.287c0,0.795,0.462,1.533,1.177,1.881L61.637,44.9C61.775,44.967,61.925,45,62.074,45c0.157,0,0.314-0.037,0.457-0.11c0.28-0.144,0.476-0.411,0.529-0.721c0.134-0.784,0.231-1.588,0.289-2.39C63.378,41.371,63.156,40.987,62.789,40.808z M47.422,17.908c0.747,0.296,1.476,0.629,2.183,0.997v16.606l12.746,6.196c-0.056,0.775-0.149,1.54-0.277,2.293l-14.038-6.823c-0.376-0.183-0.615-0.564-0.615-0.982V17.908z" fill="#260E41"></path></g></g></svg></span><span>Premier doubles every action.</span></div><button aria-pressed="false" class="hw-tgl" type="button"><span class="track"><span class="knob"></span></span>2X your points!</button></div></section><section class="hw-scene hw-rw"><h3 class="hw-sh" style="text-wrap:balance;text-align:center">Convert your points into rewards</h3><div class="hw-grid hw-rwgrid"><div class="hw-ico hw-cause hw-rwc has-ico"><img src="assets/reward-experiences.svg" alt=""><span>Experiences &amp; Sweepstakes</span></div><div class="hw-ico hw-cause hw-rwc has-ico"><img src="assets/reward-tickets.svg" alt=""><span>Concert Tickets</span></div><div class="hw-ico hw-cause hw-rwc has-ico"><img src="assets/reward-merch.svg" alt=""><span>Merch &amp; Apparel</span></div><div class="hw-ico hw-cause hw-rwc has-ico"><img src="assets/reward-memorabilia.svg" alt=""><span>Memorabilia</span></div><div class="hw-ico hw-cause hw-rwc has-ico"><img src="assets/reward-goods.svg" alt=""><span>Goods &amp; More</span></div><div class="hw-ico hw-cause hw-rwc has-ico"><img src="assets/reward-premier.svg" alt=""><span>Premier unlocks more rewards</span></div></div></section><section class="hw-scene hw-win"><h3 class="hw-sh">This could be you!</h3><div class="hw-wall"><div class="hw-tile" style="--sh:#FF58C1;--i:0"><video src="assets/w-chappell.mp4" poster="assets/w-poster-chappell.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#5FE9FD;--i:1"><img src="assets/w-gracie24_0.webp" alt="Propeller winner" loading="lazy" decoding="async"></div><div class="hw-tile" style="--sh:#80F4A8;--i:2"><video src="assets/w-afropunk.mp4" poster="assets/w-poster-afropunk.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#EEFF5B;--i:3"><img src="assets/w-op_7a9cab16.webp" alt="Propeller winner" loading="lazy" decoding="async"></div><div class="hw-tile" style="--sh:#B36FFF;--i:4"><video src="assets/w-flight.mp4" poster="assets/w-poster-flight.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#5FE9FD;--i:5"><img src="assets/w-op_64004e95.webp" alt="Propeller winner" loading="lazy" decoding="async"></div><div class="hw-tile" style="--sh:#FF58C1;--i:6"><video src="assets/w-gorgetoast.mp4" poster="assets/w-poster-gorgetoast.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#FF9378;--i:7"><video src="assets/w-thecall4.mp4" poster="assets/w-poster-thecall4.webp" muted loop playsinline preload="metadata" aria-label="Tom gets the call to meet Noah Kahan at Fenway Park"></video></div></div></section></div></div></div>
+<div class="hw"><div class="hw-hero"><div class="hw-hero-in"><h2 class="hw-h1">How it works</h2></div></div><div class="hw-scenes"><section class="hw-scene hw-act"><div class="hw-head"><h3 class="hw-sh"><span class="ta ta-a">Take action</span><span class="ta ta-b">For causes you care about</span></h3></div><div class="hw-stack"><div class="hw-grid hw-acts"><div class="hw-ico" data-pts="125"><img src="assets/icon-petition.svg" alt=""><span>Sign petitions</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-tree.svg" alt=""><span>Plant a tree</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-donate.svg" alt=""><span>Donate</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-vote.svg" alt=""><span>Register to vote</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-club.svg" alt=""><span>Join a club</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-learn.svg" alt=""><span>Learn</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-monthly.svg" alt=""><span>Give monthly</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-watch.svg" alt=""><span>Watch</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-share.svg" alt=""><span>Share</span></div><div class="hw-ico" data-pts="125"><img src="assets/icon-follow.svg" alt=""><span>Follow</span></div></div><div class="hw-grid hw-causes" aria-label="Causes"><div class="hw-ico hw-cause has-ico"><img src="assets/cause-climate.svg" alt=""><span>Environment &amp; Climate Action</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-mental.svg" alt=""><span>Mental Health</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-justice.svg" alt=""><span>Racial &amp; Social Justice</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-pride.svg" alt=""><span>LGBTQ+ Equality &amp; Pride</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-reproductive.svg" alt=""><span>Reproductive Rights &amp; Choice</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-arts.svg" alt=""><span>Education &amp; Music Arts</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-community.svg" alt=""><span>Community &amp; Animals</span></div><div class="hw-ico hw-cause has-ico"><img src="assets/cause-psychedelic.svg" alt=""><span>Psychedelic Education &amp; Safety</span></div></div></div></section><section class="hw-scene hw-earn"><h3 class="hw-sh" style="text-wrap:balance;text-align:center">Completed actions earn you points</h3><p class="hw-p">More impact = more points.</p><div class="hw-earn-card"><div class="hw-odo"><span class="hw-odo-n" data-out="">0</span><span class="hw-odo-l" data-label="">demo points from 0 actions</span></div><div class="hw-prem"><span class="hw-prem-ico"><svg aria-hidden="true" class="premier-badge" viewbox="0 0 77.145 77.144" xmlns="http://www.w3.org/2000/svg"><g><path d="M76.145,38.572C76.145,17.854,59.29,1,38.572,1S1,17.854,1,38.572s16.854,37.572,37.572,37.572S76.145,59.289,76.145,38.572z M38.572,72.272c-18.582,0-33.7-15.118-33.7-33.7c0-18.582,15.118-33.7,33.7-33.7s33.7,15.118,33.7,33.7C72.272,57.154,57.154,72.272,38.572,72.272z" fill="#80F4A8"></path><path d="M38.572,0C17.304,0,0,17.303,0,38.572c0,21.269,17.304,38.572,38.572,38.572s38.572-17.303,38.572-38.572C77.145,17.303,59.841,0,38.572,0z M1,38.572C1,17.854,17.854,1,38.572,1s37.572,16.854,37.572,37.572S59.29,76.144,38.572,76.144S1,59.289,1,38.572z" fill="#260E41"></path><path d="M71.272,38.572c0-18.031-14.669-32.7-32.7-32.7s-32.7,14.669-32.7,32.7s14.669,32.7,32.7,32.7S71.272,56.603,71.272,38.572z" fill="#FF6D48"></path><path d="M38.572,4.872c-18.582,0-33.7,15.118-33.7,33.7c0,18.583,15.118,33.7,33.7,33.7s33.7-15.118,33.7-33.7C72.272,19.99,57.154,4.872,38.572,4.872z M5.872,38.572c0-18.031,14.669-32.7,32.7-32.7s32.7,14.669,32.7,32.7s-14.669,32.7-32.7,32.7S5.872,56.603,5.872,38.572z" fill="#260E41"></path><g><path d="M23.168,57.946c0.603,0.521,1.232,1.011,1.885,1.47l13.354-7.112l13.844,7.15c0.659-0.46,1.293-0.953,1.901-1.476l-15.252-7.877c-0.157-0.081-0.328-0.121-0.5-0.121c-0.177,0-0.353,0.043-0.514,0.128L23.168,57.946z" fill="#F6FFB3"></path><path d="M54.612,57.089L39.36,49.212c-0.295-0.152-0.626-0.233-0.959-0.233c-0.34,0-0.68,0.084-0.981,0.243l-14.721,7.84c-0.291,0.155-0.487,0.444-0.524,0.771s0.09,0.652,0.34,0.868c0.625,0.54,1.286,1.056,1.964,1.532c0.172,0.12,0.373,0.182,0.575,0.182c0.161,0,0.323-0.039,0.47-0.117l12.891-6.865l13.378,6.909c0.145,0.075,0.302,0.111,0.459,0.111c0.201,0,0.402-0.061,0.573-0.18c0.682-0.477,1.349-0.994,1.981-1.538c0.252-0.217,0.38-0.545,0.341-0.875C55.107,57.531,54.907,57.242,54.612,57.089z M38.901,50.101l15.252,7.877c-0.608,0.523-1.242,1.016-1.901,1.476l-13.844-7.15l-13.354,7.112c-0.653-0.459-1.283-0.95-1.885-1.47l14.718-7.838c0.161-0.085,0.338-0.128,0.514-0.128C38.573,49.98,38.744,50.02,38.901,50.101z" fill="#260E41"></path><path d="M18.33,52.203l20.225-10.455L58.97,52.3c0.378-0.62,0.727-1.26,1.047-1.916l-20.37-10.53V16.266c-0.321-0.013-0.644-0.02-0.968-0.02c-0.408,0-0.813,0.01-1.216,0.031v23.578L17.291,50.282C17.608,50.94,17.956,51.58,18.33,52.203z" fill="#F6FFB3"></path><path d="M60.477,49.496l-19.83-10.251v-22.98c0-0.537-0.424-0.978-0.96-0.999c-0.334-0.013-0.67-0.02-1.008-0.02c-0.425,0-0.847,0.011-1.266,0.032c-0.532,0.027-0.95,0.466-0.95,0.999v22.969L16.832,49.394c-0.481,0.249-0.677,0.835-0.442,1.323c0.327,0.677,0.691,1.35,1.083,2.001c0.187,0.31,0.517,0.484,0.858,0.484c0.155,0,0.312-0.036,0.458-0.112l19.766-10.218l19.955,10.316c0.146,0.076,0.304,0.112,0.458,0.112c0.339,0,0.668-0.172,0.855-0.48c0.392-0.644,0.759-1.316,1.092-1.997C61.155,50.335,60.959,49.746,60.477,49.496z M37.464,16.277c0.403-0.02,0.808-0.031,1.216-0.031c0.324,0,0.647,0.007,0.968,0.02v23.589l20.37,10.53c-0.32,0.656-0.67,1.295-1.047,1.916L38.555,41.747L18.33,52.203c-0.374-0.622-0.722-1.263-1.039-1.92l20.172-10.428V16.277z" fill="#260E41"></path><path d="M15.304,44.115l14.274-6.938c0.376-0.183,0.615-0.564,0.615-0.982V17.808c-0.747,0.286-1.475,0.609-2.183,0.966v16.737l-12.994,6.316C15.075,42.601,15.172,43.364,15.304,44.115z" fill="#F6FFB3"></path><path d="M31.193,36.195V17.808c0-0.329-0.162-0.637-0.433-0.824c-0.169-0.116-0.367-0.176-0.567-0.176c-0.121,0-0.242,0.022-0.358,0.066c-0.771,0.295-1.536,0.634-2.276,1.007c-0.337,0.17-0.55,0.515-0.55,0.893v16.112l-12.431,6.043c-0.369,0.18-0.591,0.567-0.56,0.976c0.061,0.796,0.162,1.598,0.301,2.384c0.054,0.309,0.251,0.575,0.53,0.717c0.143,0.073,0.299,0.109,0.455,0.109c0.15,0,0.299-0.034,0.437-0.101l14.274-6.938C30.731,37.728,31.193,36.99,31.193,36.195z M28.01,18.774c0.708-0.357,1.437-0.68,2.183-0.966v18.387c0,0.418-0.239,0.799-0.615,0.982l-14.274,6.938c-0.132-0.751-0.229-1.514-0.288-2.287l12.994-6.316V18.774z" fill="#260E41"></path><polygon fill="#F6FFB3" points="60.413,23.486 58.453,23.486 58.453,26.519 55.419,26.519 55.419,28.48 58.453,28.48 58.453,31.513 60.413,31.513 60.413,28.48 63.447,28.48 63.447,26.519 60.413,26.519"></polygon><path d="M63.447,25.519h-2.033v-2.034c0-0.552-0.448-1-1-1h-1.961c-0.552,0-1,0.448-1,1v2.034h-2.033c-0.552,0-1,0.448-1,1v1.96c0,0.552,0.448,1,1,1h2.033v2.033c0,0.552,0.448,1,1,1h1.961c0.552,0,1-0.448,1-1V29.48h2.033c0.552,0,1-0.448,1-1v-1.96C64.447,25.967,63.999,25.519,63.447,25.519z M63.447,28.48h-3.033v3.033h-1.961V28.48h-3.033v-1.96h3.033v-3.034h1.961v3.034h3.033V28.48z" fill="#260E41"></path><path d="M48.037,37.177L62.074,44c0.129-0.753,0.221-1.518,0.277-2.293l-12.746-6.196V18.905c-0.708-0.368-1.436-0.701-2.183-0.997v18.287C47.422,36.613,47.661,36.994,48.037,37.177z" fill="#F6FFB3"></path><path d="M62.789,40.808l-12.183-5.922V18.905c0-0.373-0.208-0.715-0.539-0.887c-0.739-0.384-1.505-0.734-2.276-1.039c-0.119-0.047-0.244-0.07-0.368-0.07c-0.198,0-0.394,0.059-0.562,0.173c-0.274,0.186-0.438,0.496-0.438,0.827v18.287c0,0.795,0.462,1.533,1.177,1.881L61.637,44.9C61.775,44.967,61.925,45,62.074,45c0.157,0,0.314-0.037,0.457-0.11c0.28-0.144,0.476-0.411,0.529-0.721c0.134-0.784,0.231-1.588,0.289-2.39C63.378,41.371,63.156,40.987,62.789,40.808z M47.422,17.908c0.747,0.296,1.476,0.629,2.183,0.997v16.606l12.746,6.196c-0.056,0.775-0.149,1.54-0.277,2.293l-14.038-6.823c-0.376-0.183-0.615-0.564-0.615-0.982V17.908z" fill="#260E41"></path></g></g></svg></span><span>Premier doubles every action.</span></div><button aria-pressed="false" class="hw-tgl" type="button"><span class="track"><span class="knob"></span></span>2X your points!</button></div></section><section class="hw-scene hw-rw"><h3 class="hw-sh" style="text-wrap:balance;text-align:center">Convert your points into rewards</h3><div class="hw-rwimgs rw2"><div class="hw-rwc rwi rwi-pic" style="--i:0"><span class="rwi-img"><img src="assets/rw2-exp.webp" alt=""></span><span class="rwi-l">Experiences &amp; Sweepstakes</span></div><div class="hw-rwc rwi rwi-pic" style="--i:1"><span class="rwi-img"><img src="assets/rw2-vinyl.webp" alt=""></span><span class="rwi-l">Merch</span></div><div class="hw-rwc rwi rwi-pic" style="--i:2"><span class="rwi-img"><img src="assets/rw2-tee.webp" alt=""></span><span class="rwi-l">Apparel</span></div><div class="hw-rwc rwi rwi-pic" style="--i:3"><span class="rwi-img"><img src="assets/rw2-lyric.webp" alt=""></span><span class="rwi-l">Memorabilia</span></div><div class="hw-rwc rwi rwi-pic" style="--i:4"><span class="rwi-img"><img src="assets/rw2-cans.webp" alt=""></span><span class="rwi-l">Goods</span></div><div class="hw-rwc rwi rwi-pic" style="--i:5"><span class="rwi-img"><img src="assets/rw2-ticket.webp" alt=""></span><span class="rwi-l">Concert Tickets</span></div><div class="rw-prem"><span class="rw-prem-b"><img src="assets/reward-premier.svg" alt=""></span><span class="rw-prem-t">Premier unlocks more rewards!</span></div></div></section><section class="hw-scene hw-win"><h3 class="hw-sh">This could be you!</h3><div class="hw-wall"><div class="hw-tile" style="--sh:#FF58C1;--i:0"><video src="assets/w-chappell.mp4" poster="assets/w-poster-chappell.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#5FE9FD;--i:1"><img src="assets/w-gracie24_0.webp" alt="Propeller winner" loading="lazy" decoding="async"></div><div class="hw-tile" style="--sh:#80F4A8;--i:2"><video src="assets/w-afropunk.mp4" poster="assets/w-poster-afropunk.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#EEFF5B;--i:3"><img src="assets/w-op_7a9cab16.webp" alt="Propeller winner" loading="lazy" decoding="async"></div><div class="hw-tile" style="--sh:#B36FFF;--i:4"><video src="assets/w-flight.mp4" poster="assets/w-poster-flight.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#5FE9FD;--i:5"><img src="assets/w-op_64004e95.webp" alt="Propeller winner" loading="lazy" decoding="async"></div><div class="hw-tile" style="--sh:#FF58C1;--i:6"><video src="assets/w-gorgetoast.mp4" poster="assets/w-poster-gorgetoast.webp" muted loop playsinline preload="metadata" aria-label="Propeller winner moment"></video></div><div class="hw-tile" style="--sh:#FF9378;--i:7"><video src="assets/w-thecall4.mp4" poster="assets/w-poster-thecall4.webp" muted loop playsinline preload="metadata" aria-label="Tom gets the call to meet Noah Kahan at Fenway Park"></video></div></div></section></div></div></div>
 <div class="hp-experiences">
 <h2 class="hp-section-title lo-h"><span class="lo-h1">Try it out!</span><span class="lo-h2">Enter to win an incredible experience.</span></h2>
 
@@ -2400,9 +2553,9 @@ document.documentElement.className+=" js";document.body.className+=" propeller-b
     wrap.classList.add('flow');
 
     var COIN = 'assets/points-coin-ae5b50.svg';
-    var STAR_COLORS = ['#E8FF0A', '#FF58C1', '#5FE9FD', '#80F4A8', '#FF6D48', '#B36FFF', '#F9A907'];
+    var STAR_COLORS = ['#E8FF0A'];
     /* hearts for the switch from actions to causes */
-    var HEARTS = ['#FF58C1', '#FF84D1', '#FFADDF', '#FE20B0', '#FF6D48', '#B36FFF', '#E8FF0A'].map(function (c) {
+    var HEARTS = ['#FF58C1'].map(function (c) {
       return 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 32"><path fill="' + c + '" stroke="#260E41" stroke-width="1.6" stroke-linejoin="round" d="M16 29C6 21 1 15 1 9.5C1 5 4.5 1.5 8.8 1.5C12 1.5 14.6 3.4 16 6C17.4 3.4 20 1.5 23.2 1.5C27.5 1.5 31 5 31 9.5C31 15 26 21 16 29Z"/></svg>');
     });
     var STARS = STAR_COLORS.map(function (c) {
@@ -2410,6 +2563,31 @@ document.documentElement.className+=" js";document.body.className+=" propeller-b
     });
 
     /* things fly out from the middle of the screen and rain down until it is full */
+    /* things rain down from the top of the screen */
+    function rain(srcs, opts) {
+      if (calm) return;
+      var wr = wrap.getBoundingClientRect(); if (wr.bottom < innerHeight * .5 || wr.top > innerHeight) return;
+      opts = opts || {};
+      var layer = document.createElement('div'); layer.className = 'hw-burst'; layer.setAttribute('aria-hidden', 'true'); document.body.appendChild(layer);
+      var W = innerWidth, H = innerHeight, ps = [];
+      var n = Math.round(Math.min(150, 70 + W / 14) * (opts.scale || 1));
+      for (var i = 0; i < n; i++) {
+        var im = new Image(); im.src = srcs[Math.floor(Math.random() * srcs.length)]; im.alt = '';
+        var sz = (opts.min || 26) + Math.random() * (opts.range || 40); im.style.setProperty('--s', sz + 'px'); im.style.opacity = 0; layer.appendChild(im);
+        ps.push({ el: im, x: Math.random() * (W + sz) - sz, y: -sz - Math.random() * 80, vy: H * (.35 + Math.random() * .35), sw: 20 + Math.random() * 40, ph: Math.random() * 6.28, rot: Math.random() * 360, vr: (Math.random() - .5) * 240, d: Math.random() * 1.6 });
+      }
+      var t0 = performance.now(), last = t0;
+      (function frame(now) {
+        var dt = Math.min(.04, (now - last) / 1000), age = (now - t0) / 1000; last = now;
+        ps.forEach(function (p) {
+          if (age < p.d) return;
+          var a = age - p.d; p.y += p.vy * dt; p.vy += H * .25 * dt; p.rot += p.vr * dt;
+          p.el.style.transform = 'translate(' + (p.x + Math.sin(a * 2 + p.ph) * p.sw) + 'px,' + p.y + 'px) rotate(' + p.rot + 'deg)';
+          p.el.style.opacity = age > 3.6 ? Math.max(0, 1 - (age - 3.6) / .5) : 1;
+        });
+        if (age < 4.1) requestAnimationFrame(frame); else layer.remove();
+      })(t0);
+    }
     function burst(srcs, opts) {
       if (calm) return;
       /* no bursts once How it works is off screen (e.g. jumping down the page) */
@@ -2538,8 +2716,8 @@ document.documentElement.className+=" js";document.body.className+=" propeller-b
     if (odoEl) { odoEl.appendChild(slapBadge); odoEl.appendChild(slapStar); }
     var eSteps = [
       function () { odoEl && odoEl.classList.add('show'); shown = 0; acts.forEach(complete); pts = 625; done = 3; setTimeout(update, calm ? 0 : 250); return 1300; },
-      function () { slapBadge.classList.add('on'); return 1100; },
-      function () { slapStar.classList.add('on'); return 1250; },
+      function () { slapBadge.classList.add('on'); setTimeout(function () { slapStar.classList.add('on'); }, calm ? 0 : 250); setTimeout(function () { if (!prem) setPrem(true); }, calm ? 0 : 1350); eDone = eSteps.length; return 1400; },
+      function () { slapStar.classList.add('on'); return 0; },
       function () {
         if (!prem) setPrem(true);
         return 0;
@@ -2579,24 +2757,25 @@ document.documentElement.className+=" js";document.body.className+=" propeller-b
           var want = pp < -.01 ? 0 : acts.map(function (c, i) { return i * .3 / Math.max(1, acts.length - 1); }).filter(function (t) { return pp >= t; }).length;
           if (want > queue) { queue = want; drain(); }
           if (pp >= .42 && acts.every(function (x) { return x.getAttribute('aria-pressed') === 'true'; })) once('flip', function () {
-            /* hearts burst, and under them the actions give way to the causes */
-            burst(HEARTS, { min: 26, range: 46 });
-            setTimeout(function () { el.classList.add('causes'); }, calm ? 0 : 350);
-            setTimeout(function () { causeReady = true; cDrain(); }, calm ? 0 : 1100);
+            /* FOR CAUSES YOU CARE ABOUT comes in, then hearts rain down as the causes appear */
+            el.classList.add('causes');
+            setTimeout(function () { rain(HEARTS, { min: 24, range: 38 }); }, calm ? 0 : 650);
+            setTimeout(function () { causeReady = true; cDrain(); }, calm ? 0 : 900);
           });
           var cw = pp < .46 ? 0 : causes.map(function (c, i) { return .46 + i * .28 / Math.max(1, causes.length - 1); }).filter(function (t) { return pp >= t; }).length;
           if (cw > cWant) { cWant = cw; cDrain(); }
           /* once every cause is in, the next bit of scrolling sets off the coins, then on to Earn points */
           if (pp >= .84 && cShown === causes.length && !cBusy) once('b1', function () {
-            burst([COIN]);
-            setTimeout(function () { if (earnPin.getBoundingClientRect().top > hwTop + 4) goTo(earnPin); }, calm ? 0 : 1300);
+            if (earnPin.getBoundingClientRect().top > hwTop + 4) goTo(earnPin);
           });
         } else if (el.classList.contains('hw-earn')) {
           var ep = held(earnPin, el);
-          var ew = ep < -.01 ? 0 : [0, .18, .34, .52].filter(function (t) { return ep >= t; }).length;
+          /* COMPLETED ACTIONS EARN YOU POINTS lands, then points rain down */
+          if (ep >= -.01) once('coinrain', function () { setTimeout(function () { rain([COIN], { min: 28, range: 40 }); }, calm ? 0 : 700); });
+          var ew = ep < -.01 ? 0 : [0, .18].filter(function (t) { return ep >= t; }).length;
           if (ew > eWant) { eWant = ew; eDrain(); }
           /* scrolling on from the points: stars burst as Get rewards comes in */
-          if (ep >= .8 && eDone >= eSteps.length && !eBusy) once('stars', function () { burst(STARS, { min: 22, range: 40 }); });
+
         } else if (el.classList.contains('hw-win')) {
           /* HOW IT WORKS slides up out of the way for the winner video */
           var up = held(winPin, el) > -.35;
@@ -2608,8 +2787,10 @@ document.documentElement.className+=" js";document.body.className+=" propeller-b
           if (el.classList.contains('in')) once('vid', function () { if (calm) return; [].slice.call(el.querySelectorAll('video')).forEach(function (v) { var pl = v.play(); if (pl && pl.catch) pl.catch(function () {}); }); });
         } else if (el.classList.contains('hw-rw')) {
           /* reward types pop in one by one after the heading */
+          if (rwPin && held(rwPin, el) >= -.02) once('starrain', function () { setTimeout(function () { rain(STARS, { min: 20, range: 34 }); }, calm ? 0 : 700); });
           if (rwPin && held(rwPin, el) >= -.02) once('rwc', function () {
             [].slice.call(el.querySelectorAll('.hw-rwc')).forEach(function (c, i) { setTimeout(function () { c.classList.add('show'); }, calm ? 0 : 500 + i * 200); });
+            var rwBox = el.querySelector('.rw2'); if (rwBox) setTimeout(function () { rwBox.classList.add('prem-in'); }, calm ? 0 : 500 + el.querySelectorAll('.hw-rwc').length * 200 + 400);
           });
         }
       });
