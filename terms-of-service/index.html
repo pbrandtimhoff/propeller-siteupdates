@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propeller Terms of Service</title>
+</head>
+<body>
+<title>Propeller Terms of Service</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --ink:#260E41;--off:#FEFFF5;--dark:#111111;
+  --display:Oswald,"Arial Narrow",Impact,sans-serif;
+  --body:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  --pad:clamp(16px,5vw,72px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --pop:cubic-bezier(.34,1.56,.64,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:176px;}
+html{overflow-x:clip;}
+body{overflow-x:clip;margin:0;background:var(--off);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+.wrap{width:min(100%,1296px);margin:0 auto;padding:0 var(--pad);}
+
+/* ---------- site nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:var(--dark);color:var(--off);border-bottom:2px solid var(--ink);}
+.nav-in{display:flex;align-items:center;gap:28px;height:72px;width:min(100%,1296px);margin:0 auto;padding:0 var(--pad);}
+.nav-logo img{height:26px;width:auto;}
+.nav-links{display:flex;gap:26px;margin-left:24px;}
+.nav-links a{font:700 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--off);opacity:.85;transition:opacity .2s,color .2s;}
+.nav-links a:hover{opacity:1;color:#EEFF5B;}
+.nav-prem{font:700 13px/1 var(--body);padding:11px 16px;border-radius:999px;border:1.5px solid #80F4A8;text-decoration:none;color:var(--off);}
+.nav-login{margin-left:auto;font:700 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:12px 18px;border-radius:999px;border:1.5px solid rgba(254,255,245,.4);text-decoration:none;}
+@media (max-width:1080px){.nav-links,.nav-prem{display:none;}}
+
+/* ---------- shared ---------- */
+.sec{position:relative;border-top:2px solid var(--ink);padding:clamp(72px,11vh,128px) 0;}
+.kick{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:8px 14px;border:2px solid var(--ink);border-radius:999px;background:var(--off);font:700 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;box-shadow:3px 3px 0 var(--ink);}
+.kick img{width:16px;height:auto;}
+.h{margin:0;font:700 clamp(46px,7vw,112px)/.92 var(--display);text-transform:uppercase;letter-spacing:-.005em;text-wrap:balance;}
+.h em{font-style:normal;}
+.lead{font:600 clamp(19px,1.7vw,24px)/1.4 var(--body);max-width:34ch;margin:22px 0 0;}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:18px 28px;border:2px solid var(--ink);border-radius:12px;background:#FF58C1;box-shadow:3px 3px 0 var(--ink);color:var(--ink);font:900 15px/1 var(--body);letter-spacing:.3px;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s,filter .2s;}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink);filter:brightness(1.05);}
+.tlink{display:inline-flex;gap:8px;font:700 14px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:6px;}
+.tlink:hover{opacity:.75;}
+.card{background:var(--off);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--sh,var(--ink));}
+
+/* reveal */
+.rv{opacity:0;translate:0 34px;transition:opacity .6s ease,translate .9s var(--ease);transition-delay:var(--d,0ms);}
+.rv.in{opacity:1;translate:0 0;}
+.btn.rv{transition:opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms),transform .2s,box-shadow .2s,filter .2s;}
+.rv-l{translate:-60px 0;}.rv-r{translate:60px 0;}
+.rv-l.in,.rv-r.in{translate:0 0;}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:var(--off);border-top:0;padding:0;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(28px,4vw,64px);min-height:min(calc(100svh - 72px),860px);padding-top:clamp(48px,8vh,96px);padding-bottom:clamp(64px,10vh,120px);}
+.sub-kick{margin:0 0 clamp(14px,2.2vh,24px);font:400 20px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--ink);}
+@media (max-width:760px){.sub-kick{font-size:16px;}}
+.hero-kick{display:flex;align-items:center;gap:.6em;margin:0 0 clamp(18px,3vh,32px);font:400 20px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--off);}
+.hero-kick img{height:1.2em;width:auto;filter:brightness(0) invert(1);}
+@media (max-width:760px){.hero-kick{justify-content:center;font-size:16px;}}
+.hero h1{margin:0;font:700 clamp(60px,7.2vw,118px)/.88 var(--display);text-transform:uppercase;}
+.hero h1 .ln{display:block;overflow:hidden;padding:0 .08em .06em 0;}
+.hero h1 .ln>span{display:inline-block;translate:0 105%;transition:translate 1s var(--ease);transition-delay:var(--d);}
+.hero.in h1 .ln>span{translate:0 0;}
+.hero h1 .c1{color:#B6F5FF;}.hero h1 .c2{color:#EEFF5B;}.hero h1 .c3{color:#FF84D1;}
+.hero h1 .ln>span{-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;filter:drop-shadow(5px 5px 0 #000);}
+.hero .lead{color:var(--off);font-weight:500;max-width:30ch;opacity:0;translate:0 20px;transition:opacity .6s ease .7s,translate .8s var(--ease) .7s;}
+.hero .cta{margin-top:34px;opacity:0;translate:0 20px;transition:opacity .6s ease .9s,translate .8s var(--ease) .9s;}
+.hero.in .lead,.hero.in .cta{opacity:1;translate:0 0;}
+.hero{position:relative;}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:50%;margin:0;}
+.hero-grid>div:first-child>:not(.hero-tone){position:relative;z-index:1;}
+.hero .hero-tone{position:absolute;left:0;bottom:0;width:clamp(275px,32.5vw,500px);height:auto;pointer-events:none;z-index:0;}
+.hero .hero-tone.tr{left:auto;bottom:auto;top:0;right:50%;transform:rotate(180deg);}
+.hero-photo .frame{position:absolute;inset:0;overflow:hidden;opacity:0;transition:opacity 1s ease .3s;}
+.hero.in .hero-photo .frame{opacity:1;}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:55% 50%;scale:1.06;}
+.hero-photo .cap{position:absolute;right:32px;top:32px;z-index:2;padding:10px 14px;border:2px solid var(--ink);border-radius:999px;background:#EEFF5B;color:var(--ink);font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:3px 3px 0 var(--ink);rotate:7deg;}
+.hero-flower{position:absolute;left:-44px;bottom:6%;width:clamp(84px,8vw,124px);z-index:3;rotate:14deg;}
+.hero-star{position:absolute;left:-36px;top:18%;width:64px;z-index:2;}
+
+/* ---------- chapter bar ---------- */
+.chap{position:sticky;top:74px;z-index:40;transition:transform .45s cubic-bezier(.5,0,.2,1),opacity .35s;background:#FFEED5;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-bottom:-2px;}
+.chap nav{display:flex;justify-content:flex-start;flex-wrap:wrap;gap:clamp(14px,3vw,32px);width:min(100%,1296px);margin:0 auto;padding:14px var(--pad) 18px;}
+.chap a{position:relative;display:flex;align-items:center;justify-content:center;font:900 15px/1.5 var(--body);letter-spacing:.3px;text-transform:uppercase;color:var(--ink);background:var(--c);border:2px solid var(--ink);border-radius:12px;padding:10px 24px;text-decoration:none;box-shadow:4px 4px 0 var(--ink);transition:box-shadow .25s,filter .25s,transform .25s;}
+.chap.tuck{transform:translateY(-100%);opacity:0;pointer-events:none;}
+.chap a::before,.chap a::after{content:"";position:absolute;left:50%;top:100%;width:0;height:0;border-style:solid;opacity:0;transform:translate(-50%,-6px);transition:opacity .25s,transform .25s;pointer-events:none;}
+.chap a::before{border-width:15px 15px 0;border-color:var(--ink) transparent transparent;}
+.chap a::after{border-width:12px 12px 0;border-color:var(--c) transparent transparent;margin-top:-2px;}
+.chap a:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+.chap a.on,.chap a.on:hover{filter:brightness(1.1) saturate(1.25);box-shadow:6px 6px 0 var(--ink);transform:translate(-3px,-3px);}
+.chap a.on::before,.chap a.on::after{opacity:1;transform:translate(-50%,0);}
+@media (max-width:640px){.chap nav{flex-wrap:nowrap;overflow-x:auto;gap:10px;padding:10px 16px 16px;scrollbar-width:none;}.chap nav::-webkit-scrollbar{display:none;}.chap a{flex:0 0 auto;padding:7px 12px;font-size:12px;box-shadow:3px 3px 0 var(--ink);}}
+
+/* ---------- impact ---------- */
+.impact{background:#F6FFB3;position:relative;overflow:hidden;}
+.impact>.wrap{position:relative;z-index:1;}
+.impact-tone{position:absolute;top:0;right:0;width:clamp(412px,48.75vw,750px);height:auto;transform:rotate(180deg);pointer-events:none;z-index:0;}
+.impact-tone.bl{top:auto;right:auto;bottom:0;left:0;transform:none;}
+@media (max-width:760px){.impact-tone{width:clamp(338px,86vw,562px);}}
+/* corner halftones */
+.work,.story,.approach,.team,.close{overflow:clip;}
+.work{--tc:#FFADDF;}.story{--tc:#B6F5FF;}.approach{--tc:#CE9FFF;}.team{--tc:#FEDCAB;}.close{--tc:#3C0A6F;}
+.sec>.tone{position:absolute;z-index:0;width:clamp(412px,48.75vw,750px);aspect-ratio:159.796/142.714;background:var(--tc);-webkit-mask:url(assets/hero-halftone.svg) center/contain no-repeat;mask:url(assets/hero-halftone.svg) center/contain no-repeat;pointer-events:none;}
+.sec>.tone.tr{top:0;right:0;transform:rotate(180deg);}
+.sec>.tone.bl{bottom:0;left:0;}
+.work>.wrap,.story>.wrap,.team>.wrap,.close>.wrap,.approach>.ap-pin{position:relative;z-index:1;}
+@media (max-width:760px){.sec>.tone{width:clamp(338px,86vw,562px);}}
+
+.impact .h{color:#3D975E;-webkit-text-stroke:0;}
+.impact-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px) clamp(16px,2vw,28px);margin:clamp(40px,6vh,64px) 0 0;padding:0;}
+.stat{position:relative;--sh:var(--c);padding:28px 28px 52px;display:grid;grid-template-columns:max-content minmax(0,1fr);align-items:center;align-content:start;column-gap:16px;row-gap:6px;transition:transform .25s var(--pop),box-shadow .25s;}
+.stat.card{background:var(--off);padding:clamp(24px,2.4vw,34px) clamp(22px,2.2vw,32px) clamp(26px,2.6vw,36px);}
+.stat:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--sh);}
+.stat img{grid-column:1;grid-row:1;flex:none;min-width:clamp(54px,4.6vw,70px);width:clamp(54px,4.6vw,70px);height:clamp(54px,4.6vw,70px);object-fit:contain;}
+.stat dt{grid-column:2;grid-row:2;margin-top:6px;font:700 13px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.stat dd{grid-column:2;grid-row:1;margin:0;font:700 clamp(42px,4vw,76px)/.95 var(--display);white-space:nowrap;color:var(--ink);}
+.stat p{grid-column:1/-1;grid-row:3;justify-self:start;margin:16px 0 0;padding:10px 16px;background:var(--t);border:2px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font:700 14px/1.2 var(--body);white-space:nowrap;rotate:var(--rot,-3deg);}
+.stat.rv{transition:opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms),transform .25s var(--pop),box-shadow .25s;}
+.stat.rv p{opacity:0;scale:2.2;transition:opacity .15s ease,scale .45s var(--pop);transition-delay:calc(var(--d,0ms) + 650ms);}
+.stat.rv.in p{opacity:1;scale:1;}
+/* stat hover: icon wiggles, number lifts, label spreads, sticker wobbles */
+.stat img{transition:transform .4s var(--pop);}
+.stat dd{transform-origin:left center;transition:transform .35s var(--pop);}
+.stat dt{transition:letter-spacing .35s var(--ease),transform .35s var(--ease);}
+.stat:hover img{transform:rotate(-12deg) scale(1.15);}
+.stat:hover dd{transform:translateY(-4px) scale(1.05);}
+.stat:hover dt{letter-spacing:.16em;transform:translateX(2px);}
+.stat:hover p{animation:stickerWobble .55s var(--pop);}
+@keyframes stickerWobble{0%{transform:none}30%{transform:rotate(5deg) scale(1.08)}60%{transform:rotate(-3deg) scale(1.02)}100%{transform:none}}
+.report{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(24px,3.5vw,56px);margin-top:clamp(16px,2vw,28px);padding:clamp(28px,3.5vw,48px) clamp(28px,4vw,64px);background:var(--off);--sh:#FBB950;transition:opacity .6s ease,translate .9s var(--ease),transform .25s var(--pop),box-shadow .25s;}
+.report:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--sh);}
+.report .kick{margin-bottom:12px;}
+.report h3{margin:0;font:700 clamp(34px,4vw,58px)/.95 var(--display);text-transform:uppercase;}
+.report p{margin:10px 0 0;font-weight:500;}
+.report .btn{background:#EEFF5B;margin-top:22px;}
+.report-anim{width:clamp(200px,22vw,320px);aspect-ratio:1;margin:-24px 0;}
+.report-anim svg{display:block;}
+.impact .more{margin-top:32px;}
+
+/* ---------- work ---------- */
+.work{background:#FFD6EF;}
+.work .h{color:#CF1E90;}
+.artists{list-style:none;margin:clamp(40px,6vh,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);}
+.artist{overflow:hidden;--sh:var(--c);transition:transform .3s var(--pop),box-shadow .3s;}
+.artist:nth-child(1){rotate:-1.2deg;}.artist:nth-child(3){rotate:1.2deg;}
+.artist:hover{transform:scale(1.03) rotate(-1.5deg);box-shadow:10px 10px 0 var(--c);}
+
+/* work: header left, overlapping artist cards right */
+.artist.rv{transition:opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms),transform .35s var(--pop),box-shadow .35s;}
+@media (min-width:1001px){
+.work-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,3vw,48px);align-items:center;}
+#work-h{white-space:nowrap;}
+.work-top .artists{display:flex;align-items:flex-start;margin:0;padding:24px 0 36px;}
+.work-top .artist{position:relative;flex:0 0 44%;}
+.work-top .artist:nth-child(1){z-index:1;rotate:-4deg;margin-top:34px;}
+.work-top .artist:nth-child(2){z-index:2;rotate:2deg;margin-left:-16%;}
+.work-top .artist:nth-child(3){z-index:3;rotate:-1.5deg;margin-left:-16%;margin-top:52px;}
+.work-top .artist:hover{z-index:10;transform:scale(1.1) rotate(0deg);box-shadow:12px 12px 0 var(--c);}
+.work-top .artist h3{font-size:clamp(18px,1.5vw,24px);}
+.work-top .artist .tx{padding:14px 16px 16px;}
+.work-top .artist p{font-size:9.5px;padding:6px 9px;}
+}
+.artist .np-logo{display:block;height:44px;width:auto;max-width:100%;margin-top:12px;}
+.artist .np-logo.np-tall{height:62px;}
+@media (min-width:1001px){.work-top .artist .np-logo.np-tall{height:clamp(40px,3.6vw,54px);}}
+@media (min-width:1001px){.work-top .artist .np-logo{height:clamp(28px,2.6vw,38px);margin-top:10px;}}
+@media (max-width:1000px){
+.work-top .artists{display:block;margin-top:32px;padding-bottom:12px;}
+.work-top .artist{position:relative;width:min(62%,320px);}
+.work-top .artist:nth-child(1){rotate:-4deg;z-index:1;margin-left:2%;}
+.work-top .artist:nth-child(2){rotate:4deg;z-index:2;margin:-30% 1% 0 auto;}
+.work-top .artist:nth-child(3){rotate:-4deg;z-index:3;margin:-30% 0 0 3%;}
+.work-top .artist .tx{padding:12px 14px 14px;}
+.work-top .artist h3{font-size:20px;}
+.work-top .artist .np-logo{height:30px;margin-top:8px;}
+.work-top .artist .np-logo.np-tall{height:42px;}
+.work-top .artist:hover{z-index:10;}
+.work-top .artist.rv{translate:-45vw 0;transition-delay:0s;transition:opacity .9s ease,translate 1.5s var(--ease),transform .35s var(--pop),box-shadow .35s;}
+.work-top .artist.rv:nth-child(2){translate:45vw 0;}
+.work-top .artist.rv.in{translate:0 0;}
+.work-top .artist{-webkit-tap-highlight-color:transparent;cursor:pointer;}
+.work-top .artist.on{z-index:10;transform:scale(1.08) rotate(0deg);box-shadow:12px 12px 0 var(--c);}
+}
+.artist .ph{aspect-ratio:3/2;overflow:hidden;border-bottom:2px solid var(--ink);background:var(--c);}
+.artist .ph img{width:100%;height:100%;object-fit:cover;transition:scale .6s var(--ease);}
+.artist:hover .ph img{scale:1.06;}
+.artist .tx{padding:18px 22px 22px;}
+.artist h3{margin:0;font:700 clamp(26px,2.4vw,36px)/1 var(--display);text-transform:uppercase;}
+.artist p{margin:10px 0 0;display:inline-block;padding:7px 12px;border:2px solid var(--ink);border-radius:999px;background:var(--c);font:700 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+.reel{margin:clamp(12px,2vh,24px) calc(50% - 50vw) 0;}
+.reel-label{width:min(100%,1296px);margin-left:auto!important;margin-right:auto!important;padding:0 var(--pad);}
+.reel-row{mask-image:none!important;-webkit-mask-image:none!important;}
+.reel-label{margin:0 var(--pad) 18px;}
+.reel-label b{display:inline-block;padding:10px 16px;background:#EEFF5B;color:var(--ink);border:2px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font:700 15px/1.2 var(--body);rotate:-3deg;opacity:0;scale:2.2;transition:opacity .15s ease .35s,scale .45s var(--pop) .35s;}
+.reel.in .reel-label b{opacity:1;scale:1;}
+@media (prefers-reduced-motion:reduce){.reel-label b{opacity:1;scale:1;}}
+.reel-row{overflow:hidden;padding:10px 0 26px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);}
+.reel-track{display:flex;gap:22px;width:max-content;animation:slide 160s linear infinite;}
+.reel-row.rev .reel-track{animation-direction:reverse;animation-duration:85s;}
+.reel-row:hover .reel-track{animation-play-state:paused;}
+.reel-tile{position:relative;flex:none;width:clamp(150px,13vw,190px);margin:0;transition:transform .3s var(--pop);}
+.reel-tile:nth-child(odd){rotate:-2deg;}.reel-tile:nth-child(even){rotate:2deg;}
+.reel-tile:hover{transform:scale(1.07) rotate(-3deg);z-index:2;}
+.reel-tile img{width:100%;aspect-ratio:1;object-fit:cover;border:2px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);background:var(--off);}
+.reel-tile figcaption{position:absolute;left:50%;bottom:-14px;translate:-50% 0;max-width:94%;padding:7px 12px;border:2px solid var(--ink);border-radius:999px;background:var(--c);box-shadow:2px 2px 0 var(--ink);font:700 11px/1.15 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-align:center;width:max-content;}
+@media (max-width:760px){.reel-label{text-align:center;}.reel-tile{width:140px;}.reel-tile figcaption{font-size:10px;}}
+.reel-track{align-items:center;gap:clamp(14px,1.4vw,22px);}
+.reel-row{padding:6px 0;}
+.reel-name{flex:none;font:700 clamp(18px,1.5vw,24px)/1.15 var(--display);text-transform:uppercase;color:var(--ink);white-space:nowrap;transition:color .2s;}
+.reel-row.rev .reel-name{color:#CF1E90;}
+.reel-name:hover{color:#FE20B0;}
+.reel-sep{flex:none;font-size:clamp(20px,2.2vw,32px);color:#FF58C1;}
+.reel-row.rev .reel-sep{color:var(--ink);}
+@media (max-width:760px){.reel-name{font-size:18px;}}
+.also{margin:36px 0 0;font:600 clamp(18px,1.6vw,22px)/1.45 var(--body);}
+.also b{font:700 13px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-right:10px;padding:6px 10px;border-radius:999px;background:var(--ink);color:var(--off);vertical-align:3px;}
+.np-line{margin:clamp(28px,4vh,44px) 0 22px;}
+.np-line b{display:inline-block;padding:10px 16px;background:#8DEEFD;color:var(--ink);border:2px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);font:700 15px/1.25 var(--body);rotate:-3deg;opacity:0;scale:2.2;transition:opacity .15s ease .35s,scale .45s var(--pop) .35s;}
+.np-line.in b{opacity:1;scale:1;}
+.stat p,.reel-label b,.np-line b,.hero-photo .cap{box-shadow:none!important;}
+.reel-label b,.np-line b{rotate:0deg!important;}
+.quote-logo{flex:none;width:clamp(52px,5vw,72px);height:auto;border:2px solid var(--ink);border-radius:10px;}
+.quote figcaption{display:flex;align-items:center;gap:clamp(20px,4vw,64px);}
+.quote .qm-open,.quote .qm-close{position:absolute;width:clamp(60px,6vw,105px);height:auto;pointer-events:none;}
+.quote .qm-open{left:clamp(80px,9%,160px);top:0;translate:0 -58%;}
+.quote .qm-close{right:clamp(60px,6%,120px);bottom:0;translate:0 58%;}
+.quote{margin-top:clamp(64px,9vh,100px)!important;margin-bottom:clamp(40px,6vh,64px);padding-top:clamp(56px,6vw,84px)!important;}
+
+.quote .q-hl{background:linear-gradient(transparent 22%,#EEFF5B 22%,#EEFF5B 84%,transparent 84%);color:inherit;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.quote .q-name{display:block;margin-bottom:6px;font:500 19px/1.4 var(--body);}
+.quote .q-role{display:block;font:400 15px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.reel-row{background:var(--off);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:30px 0 22px!important;}
+.reel-label,.np-line{position:relative;z-index:2;margin-bottom:-21px!important;line-height:0;}
+.marquee{padding-top:34px!important;}
+@media (prefers-reduced-motion:reduce){.np-line b{opacity:1;scale:1;}}
+@media (max-width:760px){.np-line b{border-radius:18px;max-width:100%;}}
+.marquee{overflow:hidden;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--off);padding:26px 0;}
+.track{display:flex;gap:56px;width:max-content;animation:slide 48s linear infinite;align-items:center;}
+.marquee:hover .track{animation-play-state:paused;}
+.track img{height:64px;width:auto;max-width:170px;object-fit:contain;}
+@keyframes slide{to{transform:translateX(-50%);}}
+.quote{margin:clamp(40px,6vh,64px) 0 0;padding:clamp(28px,4vw,52px);background:#E7CFFF;position:relative;}
+.quote blockquote{margin:0;font:700 clamp(26px,3vw,42px)/1.12 var(--display);text-transform:uppercase;}
+.quote figcaption{margin-top:22px;font:500 16px/1.4 var(--body);}
+.quote figcaption strong{display:block;font:700 13px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.quote .qm{position:absolute;right:28px;top:-34px;font:700 120px/1 var(--display);color:#FF58C1;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;filter:drop-shadow(4px 4px 0 var(--ink));}
+
+/* ---------- story ---------- */
+.story{background:#DAF9FE;}
+.story .h{color:#038F9E;}
+.story-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center;}
+.story .story-copy{margin-top:clamp(24px,4vh,40px);}
+.story-copy p{margin:0 0 20px;font:500 clamp(17px,1.35vw,20px)/1.6 var(--body);}
+.story-copy p:first-child{font:700 clamp(22px,2vw,30px)/1.3 var(--body);}
+.story-copy strong{background:#EEFF5B;padding:0 .2em;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.collage{position:relative;height:clamp(560px,54vw,800px);}
+#story-h{white-space:nowrap;}
+.collage figure.rv{transition:opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms),transform .3s var(--pop);}
+.collage figure{position:absolute;margin:0;left:var(--x);top:var(--y);width:var(--w);rotate:var(--r);border:2px solid var(--ink);border-radius:16px;overflow:hidden;background:var(--off);box-shadow:5px 5px 0 var(--ink);transition:transform .3s var(--pop),z-index 0s;}
+.collage figure:nth-child(2){z-index:3;}
+.collage figure:hover{transform:scale(1.05) rotate(2deg);z-index:5;}
+.collage img{width:100%;aspect-ratio:var(--a,1);object-fit:cover;}
+.collage figcaption{position:absolute;left:10px;bottom:10px;padding:6px 10px;border:2px solid var(--ink);border-radius:999px;background:var(--c);font:700 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+
+/* ---------- approach ---------- */
+.approach{background:#E7CFFF;}
+.approach .h{color:#5107A0;}
+
+/* approach: pinned horizontal scroll, mark rotates with progress */
+.approach.sec{padding:0;}
+.ap-pin{position:relative;height:auto;}
+.ap-sticky{position:sticky;top:var(--stick,180px);min-height:calc(100svh - var(--stick,180px));display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:clamp(28px,5vh,56px) 0;}
+.ap-headrow{display:flex;justify-content:flex-start;align-items:flex-end;gap:clamp(14px,1.6vw,24px);}
+.ap-headrow .ap-mark{flex:none;margin-bottom:clamp(6px,1vw,14px);width:clamp(60px,5.3vw,83px);height:auto;aspect-ratio:1;}
+.ap-headrow .ap-mark{border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;}
+.ap-headrow .ap-mark{position:relative;display:block!important;}
+.ap-headrow .ap-mark::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--ink);transform:translate(6%,6%);}
+.ap-headrow .ap-mark img{position:relative;display:block;width:100%;transition:none;}
+.ap-viewport{margin-top:clamp(24px,4vh,44px);}
+.ap-rail{display:flex;gap:clamp(56px,7vw,112px);width:max-content;padding:10px var(--pad) 26px max(var(--pad),calc((100vw - 1296px)/2 + var(--pad)));will-change:transform;}
+.ap-rail .ap{flex:0 0 min(80vw,660px);}
+.ap-rail .ap:not(.cur){opacity:1;}
+.ap-rail>*{will-change:opacity;}
+.ap-rail .ap.cur{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--ink);}
+.ap-rail .ap:not(.cur){transform:none;box-shadow:6px 6px 0 var(--ink);}
+.ap-rail .ap.rv{transition:opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms),transform .35s var(--pop),box-shadow .35s;}
+@media (max-width:760px){.ap-headrow{flex-direction:row;align-items:flex-end;gap:12px;}.ap-headrow .head{align-items:flex-start!important;text-align:left!important;}.ap-headrow .h{font-size:38px!important;}.ap-headrow .ap-mark{width:46px;margin-bottom:4px;}.ap-sticky{padding:20px 0;}.ap-viewport{margin-top:18px;}.ap-rail .ap.ap{flex-basis:84vw;grid-template-columns:1fr;justify-items:start;text-align:left;padding:20px;gap:10px;}.ap-rail .ap img{width:56px;}.ap-rail .ap h3{font-size:26px;margin:6px 0 8px;}.ap-rail .ap p{font-size:14px;line-height:1.45;}.ap-rail .ap img{width:48px!important;}}
+
+/* approach card 2: photo + overlapping text card */
+.ap-combo{position:relative;flex:0 0 auto;display:flex;align-items:center;}
+.ap-photo{flex:none;width:clamp(240px,22vw,320px);aspect-ratio:1;object-fit:cover;border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);rotate:-4deg;position:relative;z-index:3;}
+.ap-combo .ap{position:relative;z-index:2;margin-left:clamp(-64px,-4vw,-40px);flex:0 0 min(70vw,720px)!important;padding-left:clamp(88px,8vw,120px)!important;padding-right:clamp(32px,3.4vw,52px)!important;}
+.ap-combo .ap .n-burst{left:clamp(96px,9vw,132px);}
+@media (max-width:760px){.ap-combo{flex-direction:column;align-items:flex-start;width:84vw;}.ap-photo{width:max(104px,min(48vw,190px,calc(100svh - 563px)));margin-left:20px;}.ap-combo .ap{margin-left:0;margin-top:-34px;flex-basis:auto!important;width:84vw;padding-left:20px!important;}.ap-combo .ap .n-burst{left:auto;right:22px;}}
+.ap-layout{display:grid;grid-template-columns:200px 1fr;gap:clamp(24px,4vw,64px);margin-top:clamp(40px,6vh,64px);}
+.ap-track{position:sticky;top:180px;align-self:start;display:flex;flex-direction:column;align-items:center;gap:18px;}
+.ap-mark{width:150px;height:150px;border:2px solid var(--ink);border-radius:50%;background:#FEFFF5;display:grid;place-items:center;box-shadow:5px 5px 0 var(--ink);}
+.ap-mark img{width:84px;transition:transform .5s var(--ease);}
+.ap-line{width:6px;height:200px;border:2px solid var(--ink);border-radius:9px;background:var(--off);overflow:hidden;}
+.ap-line span{display:block;width:100%;height:calc(var(--p,0)*100%);background:#983DFF;}
+.ap-step{font:700 14px/1 var(--mono);letter-spacing:.12em;}
+.ap-list{display:flex;flex-direction:column;gap:clamp(20px,3vw,36px);}
+.ap{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,2.5vw,36px);align-items:center;padding:clamp(24px,3vw,40px);background:var(--c);--sh:var(--ink);transition:transform .35s var(--pop),box-shadow .35s,opacity .4s;}
+.ap:not(.cur){opacity:.55;}
+.ap.cur{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--ink);}
+.ap img{width:clamp(84px,9vw,120px);height:auto;}
+.ap-title{display:flex;align-items:center;gap:clamp(12px,1.4vw,20px);margin-bottom:10px;}
+.ap-title h3{margin:0!important;font-size:clamp(26px,2.5vw,38px)!important;}
+.ap-rail .ap{grid-template-columns:minmax(0,1fr);}
+.ap-rail .ap>img{width:100%;max-width:none;}
+.n-burst{position:absolute;top:0;left:clamp(40px,4.5vw,64px);translate:0 -50%;z-index:2;flex:none;width:clamp(66px,5.6vw,86px);aspect-ratio:1;display:grid;place-items:center;rotate:-8deg;}
+.ap-rail .ap{position:relative;padding-top:clamp(52px,5vw,68px)!important;}
+.ap-rail{padding-top:clamp(44px,4.5vw,60px)!important;}
+.n-burst svg{position:absolute;inset:0;width:100%;height:100%;}
+.n-burst b{position:relative;font:700 clamp(22px,2vw,30px)/1 var(--display);color:var(--ink);rotate:8deg;}
+@media (max-width:760px){.n-burst{width:56px;left:18px;}.n-burst b{font-size:22px;}.ap-rail .ap{padding-top:58px!important;padding-bottom:26px!important;}.ap-rail{padding-top:36px!important;}}
+.ap .n{font:700 13px/1 var(--mono);letter-spacing:.12em;}
+.ap h3{margin:8px 0 10px;font:700 clamp(30px,3.4vw,50px)/.95 var(--display);text-transform:uppercase;}
+.ap p{margin:0;font-weight:500;max-width:52ch;}
+
+/* ---------- team ---------- */
+.team{background:#FFEED5;}
+.team .h{color:#CC8A07;}
+.team-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;}
+.team-top>p{max-width:38ch;margin:0 0 clamp(16px,2vw,30px);font:600 18px/1.45 var(--body);}
+.people{list-style:none;margin:clamp(40px,6vh,64px) 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,2.8vw,40px);}
+.person{flex:0 0 calc((100% - 3 * clamp(24px,2.8vw,40px)) / 4);}
+.person{text-align:center;}
+.portrait{position:relative;aspect-ratio:1;border:2px solid var(--ink);border-radius:24px;background:var(--c);box-shadow:6px 6px 0 var(--c);overflow:hidden;display:grid;place-items:center;transition:transform .3s var(--pop),box-shadow .3s;}
+.person:nth-child(odd) .portrait{rotate:-1.5deg;}.person:nth-child(even) .portrait{rotate:1.5deg;}
+.person:hover .portrait{transform:scale(1.04) rotate(-2deg);box-shadow:10px 10px 0 var(--c);}
+.person{position:relative;container-type:inline-size;}
+.team-lottie{position:absolute;z-index:4;pointer-events:none;transition:transform .3s var(--pop);}
+#brandtLottie{left:-8cqw;top:-7cqw;width:50%;aspect-ratio:1050/530;rotate:-8deg;}
+.team-lottie.tl-ben{right:-9cqw;top:6cqw;width:30%;aspect-ratio:740/1040;rotate:8deg;}
+.team-lottie.tl-maddie{right:-9cqw;top:-10cqw;width:36%;aspect-ratio:960/920;rotate:9deg;}
+.team-lottie.tl-mark{right:-12cqw;top:46cqw;width:33%;aspect-ratio:820/900;rotate:12deg;}
+.team-lottie.tl-paulina{left:-14cqw;top:52cqw;width:34%;aspect-ratio:860/800;rotate:-11deg;}
+.team-lottie.tl-brandon{right:-8cqw;top:68cqw;width:30%;aspect-ratio:640/760;rotate:7deg;}
+.team-lottie.tl-noelle{left:-9cqw;top:-9cqw;width:40%;aspect-ratio:840/790;rotate:-6deg;}
+.team-lottie.tl-carly{left:-10cqw;top:64cqw;width:42%;aspect-ratio:830/860;rotate:-8deg;}
+.person:hover .team-lottie{transform:translateY(-6px) scale(1.06);}
+.portrait img.photo{width:100%;height:100%;object-fit:cover;}
+.portrait .mono{font:700 clamp(54px,6vw,76px)/1 var(--display);color:var(--off);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;filter:drop-shadow(4px 4px 0 var(--ink));}
+.portrait .art{position:absolute;right:8px;bottom:8px;width:48px;height:auto;}
+.person h3{margin:18px 0 6px;font:700 24px/1 var(--display);text-transform:uppercase;}
+.person p{margin:0;font:700 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.8;}
+.remote{display:flex;align-items:center;gap:clamp(20px,2.4vw,36px);margin-top:clamp(40px,6vh,64px);padding:0;font:600 clamp(16px,1.3vw,19px)/1.5 var(--body);}
+.remote-anim{width:clamp(120px,10vw,156px);aspect-ratio:680/780;flex:none;rotate:-10deg;}
+
+/* ---------- close ---------- */
+.close{background:var(--ink);color:var(--off);}
+#close-h{position:relative;}
+.close-anim-m{display:none;}
+@media (max-width:1000px){.close .close-anim{display:none;}.close-anim-m{display:block;position:relative;z-index:5;width:200px;aspect-ratio:720/580;margin:-24px 7px -96px auto;transform:scaleX(-1);}}
+.close-anim{position:absolute;right:0;bottom:calc(-.1em - 15px);width:clamp(140px,13vw,200px);aspect-ratio:720/580;-webkit-text-stroke:0;}
+.close-anim svg{filter:none;}
+.close .h{font-size:clamp(46px,5.2vw,84px);color:#80F4A8;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;filter:drop-shadow(5px 5px 0 #000);}
+.close-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,80px);align-items:start;}
+.close-grid>*,.story-grid>*{min-width:0;}
+.close .sub{margin:20px 0 0;font:600 20px/1.4 var(--body);}
+.doors{display:grid;gap:16px;margin-top:0;}
+.door{display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:center;padding:22px 26px;background:var(--c);color:var(--ink);text-decoration:none;--sh:#000;border-color:var(--ink);transition:transform .25s var(--pop),box-shadow .25s;}
+.door:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 #000;}
+.door strong{font:700 clamp(24px,2.2vw,32px)/1 var(--display);text-transform:uppercase;}
+.door span{grid-column:1;font-weight:500;}
+.door .arr{grid-column:2;grid-row:1/3;width:56px;height:56px;display:block;}
+.door .arr svg{width:100%;height:100%;display:block;overflow:visible;}
+.door .arr .ah{transform-box:fill-box;transform-origin:center;rotate:-45deg;transition:rotate .3s var(--pop);}
+.door:hover .arr .ah{rotate:0deg;}
+.contact{position:relative;padding:36px 30px 30px;background:#EEFF5B;color:var(--ink);--sh:#000;margin-top:32px;}
+.contact .rocket{position:absolute;right:-22px;top:-62px;width:118px;rotate:12deg;}
+.contact .mail{display:inline-block;max-width:100%;overflow-wrap:anywhere;margin:6px 0 8px;font:700 clamp(24px,2.3vw,34px)/1.05 var(--display);text-transform:uppercase;text-decoration:none;border-bottom:3px solid var(--ink);}
+@media (max-width:520px){.contact{padding:28px 22px 24px;}.contact .mail{font-size:clamp(18px,5.6vw,24px);overflow-wrap:normal;white-space:nowrap;}}
+.contact p{margin:0;font-weight:500;}
+.contact .links{display:grid;gap:14px;margin-top:26px;padding-top:34px;border-top:2px dashed var(--ink);}
+.contact .tlink{display:block;font-size:12px;line-height:1.45;border-bottom:0;padding-bottom:0;}
+.contact .tlink .nw{white-space:nowrap;}
+.contact .tlink .arrow-icon{display:inline-block;vertical-align:-.12em;margin-left:6px;}
+.arrow-icon{width:1.4em;height:.85em;flex:none;transition:transform .2s;}
+.tlink:hover .arrow-icon{transform:translateX(3px);}
+
+/* footer */
+.foot{background:var(--dark);color:var(--off);border-top:2px solid var(--ink);padding:40px 0;}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;}
+.foot a{font:700 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;opacity:.8;}
+.foot a:hover{opacity:1;}
+.foot small{margin-left:auto;font:400 12px/1 var(--mono);opacity:.6;}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;min-height:0;padding-bottom:0!important;}
+  .hero-grid>div:first-child{padding-bottom:56px;position:relative;}
+  .hero .hero-tone{left:calc(-1 * var(--pad));bottom:calc(-1 * clamp(28px,4vw,64px));width:clamp(225px,57.5vw,375px);}
+  .hero .hero-tone.tr{left:auto;right:calc(-1 * var(--pad));bottom:auto;top:calc(-1 * clamp(48px,8vh,96px));}
+  .hero-photo{position:relative;width:auto;margin:0 calc(-1 * var(--pad));aspect-ratio:4/3;justify-self:stretch;}
+  .hero-flower{left:auto;right:16px;bottom:auto;top:-46px;}
+  .stats,.artists{grid-template-columns:1fr;}
+  .artist:nth-child(n){rotate:0deg;}
+  .story-grid,.close-grid{grid-template-columns:1fr;}.close-grid>div:first-child{display:contents;}.close-grid .head{order:1;}.close-grid .doors{order:2;}.close-grid .contact{order:3;margin-top:0;}
+  .ap-layout{grid-template-columns:1fr;}
+  .ap-track{display:none;}
+  .ap:not(.cur){opacity:1;}
+  .report{grid-template-columns:1fr;justify-items:center;text-align:center;margin-top:40px;}
+  .report .kick{margin-left:auto;margin-right:auto;}
+  .report-anim{width:240px;margin:-14px 0 -18px;}
+}
+@media (max-width:760px){
+  body{font-size:16px;}
+  .hero-grid{padding-top:56px;padding-bottom:84px;text-align:center;justify-items:center;}
+  .hero .lead{margin-left:auto;margin-right:auto;}
+  .hero h1{font-size:clamp(60px,18vw,92px);}
+  .hero-flower{right:12px;top:-40px;width:78px;}
+  .hero-star{display:none;}
+  .hero-photo .cap{right:14px;top:18px;}
+  .sec{padding:72px 0;}
+  .hero.sec{padding:0;}
+  .sec .wrap>.kick,.sec .head{text-align:center;}
+  .head{display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .impact-top,.team-top{justify-content:center;text-align:center;}
+  .team-top>p{margin:0 auto;}
+  .h{font-size:clamp(46px,13vw,64px);}
+  .lead{margin-left:auto;margin-right:auto;text-align:center;}
+  .stat{grid-template-columns:max-content max-content;justify-content:center;text-align:left;}
+  .stats{row-gap:40px;}
+  .stat p{justify-self:center;font-size:13px;}
+  .stat dd{font-size:clamp(48px,14vw,64px);}
+  .also,.np-line{text-align:center;margin-left:auto;margin-right:auto;}
+  .track img{height:48px;}
+  .people{gap:18px;}
+  .person{flex-basis:calc((100% - 18px) / 2);}
+  .team-lottie.tl-ben{right:-4cqw;}.team-lottie.tl-brandon{right:-2cqw;width:27%;}.team-lottie.tl-paulina{left:-5cqw;}.team-lottie.tl-mark{right:-6cqw;}#brandtLottie{left:-4cqw;}.team-lottie.tl-noelle{left:-3cqw;}.team-lottie.tl-carly{left:-3cqw;}
+  .collage{display:grid;grid-template-columns:1fr 1fr;gap:14px;height:auto;}
+  .collage figure{position:relative;left:auto;top:auto;width:auto;}
+  .collage img{aspect-ratio:1!important;}
+  .person h3{font-size:20px;}
+  .remote{flex-direction:column;text-align:center;}
+  .ap{grid-template-columns:1fr;justify-items:center;text-align:center;}
+  .close .sub{text-align:center;}
+  .door{grid-template-columns:1fr auto;}
+  .contact{margin-top:32px;}
+  .contact .rocket{right:-6px;width:92px;top:-56px;}
+  .quote .qm-open{left:24px;width:54px;}
+  .quote .qm-close{right:24px;width:54px;}
+  .quote figcaption{gap:16px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;}
+  .rv,.hero h1 .ln>span,.hero .lead,.hero .cta,.hero-photo .frame{opacity:1!important;translate:none!important;scale:1!important;}
+}
+
+
+/* ===== support page ===== */
+.door .env{grid-column:2;grid-row:1/3;width:64px;display:block;transition:transform .3s var(--pop);}
+.door .env svg{display:block;width:100%;height:auto;overflow:visible;}
+.door:hover .env{transform:rotate(-8deg) scale(1.08);}
+.sup-close .cl-left{display:flex;flex-direction:column;padding-bottom:0!important;}
+.sup-close .cl-left .sup-art{flex:none;margin:auto auto 0 calc(-1 * min(4vw,56px));padding-top:28px;width:min(118%,640px);max-width:none;}
+.sup-close .cl-right{display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(72px,11vh,128px);}
+.sup-close .cl-right .mail-list{margin-top:0;}
+@media (max-width:1000px){.sup-close .cl-left,.sup-close .cl-right{display:contents;}.sup-close .head{order:1;}.sup-close .mail-list{order:2;}.sup-close .kind{order:3;}.sup-close .cl-left .sup-art{order:4;margin:0 auto;padding-top:8px;width:min(100%,520px);}}
+.mail-list{display:grid;gap:16px;margin-top:32px;}
+.mail-list .door strong{font-size:clamp(22px,2vw,30px);text-transform:none;font-family:var(--display);}
+.mail-list .door .lbl{grid-column:1;font:500 16px/1.4 var(--body);}
+.sup-close .mail-doors .kind{margin-top:0;}
+@media (max-width:1000px){.sup-close .mail-list{order:2;margin-top:0;}}
+.sup-art{display:block;width:min(100%,520px);height:auto;margin:clamp(12px,2vw,24px) auto 0;}
+#contact{padding-bottom:0;}.sup-close-grid>div:first-child{padding-bottom:clamp(72px,11vh,128px);}
+.sup-close .sup-close-grid{align-items:stretch;}.sup-close .mail-doors{display:flex;flex-direction:column;gap:16px;}.sup-close .mail-doors .sup-art{margin-top:auto;padding-top:24px;}
+@media (max-width:1000px){.sup-close .mail-doors{display:contents;}.sup-close .mail-doors .door{order:2;}.sup-close .kind{order:3;}.sup-close .mail-doors .sup-art{order:4;margin-top:8px;padding-top:0;}}
+.win-more{display:flex;justify-content:center;margin-top:clamp(32px,4vw,48px);}
+.sup-hero .hero-grid>div{display:inline-grid;justify-items:center;}
+.sup-hero h1{white-space:nowrap;}
+.sup-hero .lead{width:0;min-width:100%;max-width:none;}
+.lc{text-transform:none;}
+.sup-hero .hero-grid{grid-template-columns:1fr!important;justify-items:center;text-align:center;min-height:0!important;padding-top:clamp(72px,12vh,140px)!important;padding-bottom:clamp(72px,12vh,140px)!important;}
+.sup-hero .lead{margin-left:auto;margin-right:auto;}
+.sup-hero .hero-quick{justify-content:center;}
+
+.sup-hero{background:#0D1A40;}
+#faqs{background:#F8F3FF;}#faqs .h{color:#6702CF;}
+#winners{background:#E2FCEA;}#winners .h{color:#3D975E;}
+#info{background:#FFF6F4;}#info .h{color:#CF3803;}
+#contact{background:#3C64FF;}
+#contact .h{color:#EEFF5B;}
+#contact .sub{color:var(--off);}
+#contact .sub a{color:#EEFF5B;}
+#contact .kind{background:#FFADDF;}
+
+.sup-hero .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);min-height:min(calc(100svh - 72px),720px);}
+.sup-hero .hero-tone{position:absolute;left:0;bottom:0;top:auto;right:auto;transform:none;width:clamp(275px,32.5vw,500px);}
+.sup-hero .hero-tone.tr{left:auto;bottom:auto;top:0;right:0;transform:rotate(180deg);}
+.sup-hero .wrap{position:relative;z-index:1;}
+.hero-help{position:relative;justify-self:center;width:min(100%,460px);aspect-ratio:1;}
+.hero-help .globe{position:absolute;inset:6%;}
+.hero-help .stk{position:absolute;padding:10px 16px;border:2px solid var(--ink);border-radius:999px;color:var(--ink);font:700 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;opacity:0;scale:1.8;transition:opacity .2s ease,scale .5s var(--pop);}
+.hero.in .hero-help .stk{opacity:1;scale:1;}
+.hero-help .s1{background:#EEFF5B;left:-4%;top:12%;rotate:-7deg;transition-delay:.9s;}
+.hero-help .s2{background:#FF84D1;right:-2%;top:44%;rotate:6deg;transition-delay:1.05s;}
+.hero-help .s3{background:#8DEEFD;left:6%;bottom:8%;rotate:-3deg;transition-delay:1.2s;}
+.hero-quick{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;opacity:0;translate:0 20px;transition:opacity .6s ease .9s,translate .8s var(--ease) .9s;}
+.hero.in .hero-quick{opacity:1;translate:0 0;}
+.hero-quick .btn{padding:14px 22px;}
+.faqs-sec,.winners-sec,.info-sec{position:relative;overflow:clip;}
+.sec-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;}
+.faq-list{display:grid;gap:16px;margin-top:clamp(36px,5vh,56px);}
+.faq{background:var(--off);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--c);transition:box-shadow .25s,transform .25s var(--pop),opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms);}
+.faq:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--c);}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px clamp(20px,2.4vw,32px);}
+.faq summary::-webkit-details-marker{display:none;}
+.faq .q{font:700 clamp(20px,1.8vw,26px)/1.1 var(--display);text-transform:uppercase;}
+.faq .pm{position:relative;flex:none;width:44px;height:44px;border:2px solid var(--ink);border-radius:50%;background:var(--c);transition:rotate .35s var(--pop);}
+.faq .pm::before,.faq .pm::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:3px;border-radius:2px;background:var(--ink);translate:-50% -50%;}
+.faq .pm::after{rotate:90deg;transition:opacity .2s;}
+.faq[open] .pm{rotate:180deg;}
+.faq[open] .pm::after{opacity:0;}
+.faq .ans{padding:0 clamp(20px,2.4vw,32px) 24px;max-width:78ch;font:500 17px/1.6 var(--body);}
+.faq .ans p{margin:0 0 12px;}.faq .ans ul{margin:0 0 12px;padding-left:20px;}.faq .ans li{margin:0 0 8px;}
+.faq .ans a{color:inherit;font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px;}
+.faq .heads{padding:14px 16px;border:2px dashed var(--ink);border-radius:14px;background:#FFEED5;}
+.faq .heads b{font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-right:4px;}
+.win-grid{list-style:none;padding:0;margin:clamp(36px,5vh,56px) 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,28px);}
+.win{position:relative;display:flex;flex-direction:column;gap:14px;padding:26px 24px 22px;background:var(--c);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);transition:opacity .6s ease var(--d,0ms),translate .9s var(--ease) var(--d,0ms),transform .3s var(--pop),box-shadow .3s;}
+.win:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink);}
+.win .ticket{align-self:flex-start;padding:6px 10px;border:2px dashed var(--ink);border-radius:8px;background:var(--off);font:700 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.win p{margin:0;flex:1;font:700 clamp(19px,1.6vw,23px)/1.15 var(--display);text-transform:uppercase;}
+.win .who{align-self:flex-start;padding:8px 14px;border:2px solid var(--ink);border-radius:999px;background:var(--t);font:700 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;}
+
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px);margin-top:clamp(36px,5vh,56px);}
+.info-grid .door strong{font-size:clamp(22px,1.9vw,28px);}
+.sup-close .wrap{position:relative;z-index:1;}
+.sup-close-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:start;}
+.sup-close .sub a{color:#EEFF5B;font-weight:700;}
+.kind{margin-top:32px;padding:26px 26px 24px;background:#EEFF5B;color:var(--ink);--sh:#000;font:500 17px/1.55 var(--body);}
+.kind .kick-s{display:inline-block;margin-bottom:12px;padding:7px 12px;border:2px solid var(--ink);border-radius:999px;background:var(--off);font:700 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.kind p{margin:0;}
+.mail-doors{display:grid;gap:16px;}
+.mail-doors .door strong{font-size:clamp(22px,2vw,30px);text-transform:none;font-family:var(--display);}
+.mail-doors .door .lbl{grid-column:1;font:500 16px/1.4 var(--body);letter-spacing:0;text-transform:none;}
+#close-h{position:relative;}
+.close-anim{position:absolute;right:0;bottom:calc(-.1em - 15px);width:clamp(140px,13vw,200px);aspect-ratio:720/580;-webkit-text-stroke:0;}
+.foot .soc{display:flex;gap:14px;}
+@media (max-width:1000px){
+ .sup-hero .hero-grid{grid-template-columns:1fr;padding-bottom:64px!important;}
+ .sup-hero .hero-grid>div:first-child{padding-bottom:0;}
+ .hero-help{width:min(76%,340px);margin-top:8px;}
+ .sup-hero .hero-tone{left:0;bottom:0;width:clamp(225px,57.5vw,375px);}
+ .sup-hero .hero-tone.tr{left:auto;right:0;top:0;}
+ .hero-quick{justify-content:center;}
+ .win-grid,.info-grid{grid-template-columns:1fr;}
+ .sup-close-grid{grid-template-columns:1fr;}
+ .close-anim{position:static;display:block;margin:10px auto 0;width:180px;}
+ .sec-top{justify-content:center;text-align:center;}
+}
+@media (min-width:761px) and (max-width:1000px){.win-grid,.info-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.faq-list{grid-template-columns:minmax(0,1fr);}.faq{min-width:0;}.faq .ans{overflow-wrap:anywhere;}
+.sup-hero h1{font-size:clamp(56px,6.4vw,104px);}
+@media (max-width:520px){.sup-hero h1{font-size:7.6vw;}}
+@media (max-width:1000px){
+ .sup-close .close-anim{display:block;}
+ .sup-close-grid>div:first-child{display:contents;}
+ .sup-close .head{order:1;}.mail-doors{order:2;}.sup-close .kind{order:3;margin-top:0;}
+ .win-grid{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:min(78vw,320px);overflow-x:auto;scroll-snap-type:x mandatory;margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad));padding:10px var(--pad) 26px;scrollbar-width:none;}
+ .win-grid::-webkit-scrollbar{display:none;}
+ .win{scroll-snap-align:center;}
+ .win-hint{display:block;}
+}
+.win-hint{display:none;margin:6px 0 0;text-align:center;font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+@media (max-width:760px){.faq summary{padding:18px 18px;}.faq .ans{font-size:16px;padding:0 18px 20px;}.faq .pm{width:38px;height:38px;}}
+
+/* hero with image */
+.sup-hero .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;justify-items:stretch;text-align:center;column-gap:clamp(28px,4vw,64px);}
+.sup-hero .hero-grid>div{justify-self:center;}
+.sup-hero h1{font-size:clamp(36px,3.5vw,62px)!important;}
+.sup-hero-art{display:block;width:100%;height:auto;rotate:2deg;opacity:0;translate:30px 0;transition:opacity .8s ease .4s,translate 1s var(--ease) .4s;}
+.hero.in .sup-hero-art{opacity:1;translate:0 0;}
+@media (max-width:1000px){.sup-hero .hero-grid{grid-template-columns:1fr!important;row-gap:36px;}.sup-hero-art{width:min(100%,560px);justify-self:center;}}
+@media (max-width:1000px){.sup-hero h1{font-size:clamp(28px,7.6vw,62px)!important;}}
+
+/* hero image to bottom */
+.sup-hero .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;padding-bottom:0!important;align-items:end;}
+.sup-hero .hero-grid>div{align-self:center;padding-bottom:clamp(72px,12vh,140px);}
+.sup-hero-art{align-self:end;justify-self:stretch;width:auto;max-width:none;rotate:0deg;margin-top:clamp(24px,4vh,48px);margin-right:calc(-1 * ((100vw - min(100vw,1296px)) / 2 + var(--pad)));transform:scaleX(-1);}
+@media (max-width:1000px){.sup-hero .hero-grid{grid-template-columns:minmax(0,1fr)!important;}.sup-hero .hero-grid>div{padding-bottom:0;}.sup-hero-art{width:auto;justify-self:stretch;margin-right:calc(-1 * var(--pad));margin-left:8%;}}
+
+.chap{background:#983DFF;}
+
+/* ===== privacy page ===== */
+.pp-hero{background:#0D1A40;color:var(--off);border-top:0;}
+.pp-hero .wrap{padding-top:clamp(64px,10vh,120px);padding-bottom:clamp(64px,10vh,120px);text-align:center;display:flex;flex-direction:column;align-items:center;}
+.pp-hero h1{margin:0;font:700 clamp(48px,7vw,112px)/.9 var(--display);text-transform:uppercase;}
+.pp-hero h1 .c1{color:#B6F5FF;}.pp-hero h1 .c2{color:#EEFF5B;}
+.pp-hero h1 span{-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;filter:drop-shadow(5px 5px 0 #000);}
+.pp-hero .lead{margin:24px auto 0;color:var(--off);font-weight:500;max-width:46ch;}
+.pp-date{display:inline-block;margin-top:28px;padding:10px 16px;border:2px solid var(--ink);border-radius:999px;background:#FF84D1;color:var(--ink);font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;}
+.pp-body{background:#F8F3FF;}
+.pp-grid{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start;}
+.pp-toc{position:sticky;top:96px;max-height:calc(100vh - 120px);overflow:auto;padding:22px 20px;background:var(--off);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 #983DFF;}
+.pp-toc p{margin:0 0 12px;font:700 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;}
+.pp-toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;}
+.pp-toc a{display:flex;gap:10px;align-items:baseline;padding:7px 8px;border-radius:10px;color:var(--ink);text-decoration:none;font:600 14px/1.3 var(--body);transition:background .2s;}
+.pp-toc a:hover,.pp-toc a.on{background:#E7CFFF;}
+.pp-toc .n{flex:none;font:700 11px/1 var(--mono);opacity:.6;}
+.pp-list{display:grid;gap:clamp(18px,2vw,24px);}
+.pp-sec{scroll-margin-top:96px;padding:clamp(24px,3vw,40px);background:var(--off);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--c);font:500 17px/1.65 var(--body);transition:opacity .6s ease,translate .9s var(--ease);}
+.pp-sec h2{display:flex;align-items:center;gap:14px;margin:0 0 16px;font:700 clamp(24px,2.3vw,34px)/1.05 var(--display);text-transform:uppercase;}
+.pp-sec h2 .n{flex:none;display:grid;place-items:center;width:44px;height:44px;border:2px solid var(--ink);border-radius:50%;background:var(--c);font:700 13px/1 var(--mono);}
+.pp-sec p{margin:0 0 14px;}.pp-sec p:last-child{margin-bottom:0;}
+.pp-sec ul{margin:0 0 14px;padding-left:22px;}.pp-sec li{margin:0 0 10px;}.pp-sec li ul{margin-top:10px;}
+.pp-sec li::marker{color:#983DFF;}
+.pp-sec a{color:inherit;font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px;overflow-wrap:anywhere;}
+.pp-sec b{font-weight:800;}
+.pp-q{margin-top:clamp(28px,4vw,48px);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:24px 28px;background:#3C64FF;color:var(--off);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);}
+.pp-q strong{font:700 clamp(22px,2.2vw,30px)/1.05 var(--display);text-transform:uppercase;color:#EEFF5B;}
+.pp-q .btn{background:#FF84D1;}
+@media (max-width:1000px){.pp-grid{grid-template-columns:minmax(0,1fr);}.pp-toc{position:static;max-height:none;}.pp-toc ol{grid-template-columns:1fr 1fr;}}
+@media (max-width:620px){.pp-toc ol{grid-template-columns:1fr;}.pp-sec{font-size:16px;}.pp-sec h2 .n{width:38px;height:38px;}}
+.pp-sec ol{margin:0 0 14px;padding-left:26px;}.pp-sec ol li::marker{font:700 14px var(--mono);color:#983DFF;}
+.pp-hero h1 .c1{color:#FFADDF;}.pp-hero h1 .c2{color:#80F4A8;}
+.pp-date{background:#EEFF5B;}
+/* page scheme */
+.pp-hero{background:#0D3B40;}
+.pp-body{background:#F6FDFF;}
+.pp-toc{box-shadow:6px 6px 0 #02B9CD;}
+.pp-toc a:hover,.pp-toc a.on{background:#B6F5FF;}
+.pp-sec li::marker,.pp-sec ol li::marker{color:#038F9E;}
+.pp-q{background:#038F9E;}.pp-q strong{color:#EEFF5B;}.pp-q .btn{background:#FF84D1;}
+.pp-hero h1{line-height:1.08!important;}
+.pp-hero.sec{padding-top:0;padding-bottom:0;}
+.pp-hero .wrap.tv-hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,3vw,48px);align-items:end;text-align:left;padding-top:clamp(56px,8vh,96px);padding-bottom:0;}
+.tv-txt{align-self:center;display:flex;flex-direction:column;align-items:flex-start;padding-bottom:clamp(56px,8vh,96px);}
+.tv-hero h1{font-size:clamp(48px,5.6vw,96px)!important;}
+.tv-hero .lead{margin:22px 0 0;}
+.tv-art{display:block;max-width:none;width:calc(100% + (100vw - min(100vw,1296px)) / 2 + var(--pad));margin-right:calc(-1 * ((100vw - min(100vw,1296px)) / 2 + var(--pad)));height:auto;}
+@media (max-width:1000px){.pp-hero .wrap.tv-hero{grid-template-columns:minmax(0,1fr);text-align:center;}.tv-txt{align-items:center;padding-bottom:8px;}.tv-hero .lead{margin-left:auto;margin-right:auto;}.tv-art{width:calc(100% + 2*var(--pad));margin:0 calc(-1*var(--pad));}}
+.pp-body{position:relative;clip-path:inset(0);background:#DAF9FE;}
+.pp-body::before{content:"";position:fixed;inset:0;z-index:0;background:#DAF9FE url(assets/terms-bg.webp) center/cover no-repeat;pointer-events:none;}
+.pp-body>.wrap{position:relative;z-index:1;}
+</style>
+<header class="nav"><div class="nav-in">
+  <a class="nav-logo" href="#top" aria-label="Propeller home"><img src="assets/propeller-logo-white.svg" alt="Propeller"></a>
+  <nav class="nav-links" aria-label="Main"><a href="#">Take action</a><a href="#">Rewards</a><a href="#">Clubs</a><a href="#">Impact</a><a href="#">How it works</a><a href="#">Winners</a></nav>
+  <a class="nav-prem" href="#">Propeller Premier</a>
+  <a class="nav-login" href="#">Log in</a>
+</div></header>
+<main id="top">
+<section class="sec pp-hero" aria-labelledby="t">
+  <div class="wrap tv-hero">
+    <div class="tv-txt">
+      <h1 id="t"><span class="c1">Terms of</span> <span class="c2">service</span></h1>
+      <p class="lead">The rules for using Propeller: how the platform works, points and sweepstakes, rewards shipping, SMS and your content.</p>
+      <span class="pp-date">Updated October 1, 2026</span>
+    </div>
+    <img class="tv-art" src="assets/terms-hero.gif" width="1000" height="533" alt="Halftone collage of a smiley-faced office worker at a retro desk holding a Terms of Service document">
+  </div>
+</section>
+<section class="sec pp-body" aria-label="Terms of service">
+  <div class="wrap pp-grid">
+    <nav class="pp-toc" aria-label="On this page"><p>On this page</p><ol><li><a href="#introduction"><span class="n">01</span>Introduction</a></li><li><a href="#how-propeller-works"><span class="n">02</span>How Propeller Works</a></li><li><a href="#registration"><span class="n">03</span>Registration</a></li><li><a href="#ownership"><span class="n">04</span>Ownership</a></li><li><a href="#sweepstakes"><span class="n">05</span>Sweepstakes</a></li><li><a href="#points"><span class="n">06</span>Points</a></li><li><a href="#propeller-premier"><span class="n">07</span>Propeller Premier</a></li><li><a href="#shipping-delivery-and-lost-or-stolen-packages"><span class="n">08</span>Shipping, Delivery, and Lost or Stolen Packages</a></li><li><a href="#sms-terms-and-conditions"><span class="n">09</span>SMS Terms and Conditions</a></li><li><a href="#content-from-you"><span class="n">10</span>Content From You</a></li><li><a href="#content-received-by-you"><span class="n">11</span>Content Received by You</a></li><li><a href="#use-and-restrictions"><span class="n">12</span>Use and Restrictions</a></li><li><a href="#access-of-third-party-sites"><span class="n">13</span>Access of Third-party Sites</a></li><li><a href="#no-archive"><span class="n">14</span>No Archive</a></li><li><a href="#united-states-only"><span class="n">15</span>United States Only</a></li><li><a href="#disclaimers"><span class="n">16</span>Disclaimers</a></li><li><a href="#limitation-of-liability"><span class="n">17</span>Limitation of Liability</a></li><li><a href="#digital-millennium-copyright-act"><span class="n">18</span>Digital Millennium Copyright Act</a></li><li><a href="#indemnity"><span class="n">19</span>Indemnity</a></li><li><a href="#trademarks-and-copyright"><span class="n">20</span>Trademarks and Copyright</a></li><li><a href="#amendments"><span class="n">21</span>Amendments</a></li><li><a href="#miscellaneous"><span class="n">22</span>Miscellaneous</a></li></ol></nav>
+    <div>
+      <div class="pp-list"><section class="pp-sec rv" id="introduction" style="--c:#8DEEFD"><h2><span class="n" aria-hidden="true">01</span>Introduction</h2><p>Welcome to www.propeller.la (the “Site”) which is owned and operated by Propeller Enterprises, (“Propeller,” “we,” or “us”). These Terms of Service (“Terms”) form a binding agreement between you and Propeller, and govern your use of the Site.</p><p>These Terms set forth the legally binding terms for your use of the Site. By accessing, downloading, or using the Site, you are accepting these Terms and you represent and warrant that you have the right, authority, and capacity to enter into this Agreement. You may not access or use the Site or accept these Terms if you are not at least 18 years old. If you do not agree with all of the provisions of this Agreement, do not access and/or use the Site.</p></section><section class="pp-sec rv" id="how-propeller-works" style="--c:#A4F6BE"><h2><span class="n" aria-hidden="true">02</span>How Propeller Works</h2><p>Propeller provides a technology platform (“Platform”) through which users (“Users”) participate in certain actions and earn points (“Points”) that can be redeemed for certain rewards, including sweepstakes entries (“Rewards”). Actions typically involve certain fundraising campaigns or social good missions (e.g. signing petitions, subscribing to mailing lists, pledging to volunteer, etc.) for participating charities, not-for-profits, and professional fundraising entities (each a “Cause”). In order to sustain operations of the Platform, Propeller typically charges a small fee to any Cause that uses the Platform (the “Fee”). Together with payment processing fees, the Fee will never exceed 20% of total donations, so that the charitable disbursement is no less than 80% of donations.</p><p>Propeller does not directly receive funds donated to a Cause through the Platform. Each Cause page on which a User may donate will indicate the recipient of the donation and the entity that charges the User’s payment method, and donations are received as described on that page. Depending on the Cause, donations may be received directly by the Cause or by a receiving charity that grants funds to the Cause, in each case less any Fees that are directed to be paid to Propeller, which may be set up as an automatic deduction and payment to Propeller. Except in the event of fraud and a valid chargeback by a credit card issuer, all donations to a Cause are non-refundable. Any refunds that might be issued are done so at the sole discretion of the applicable Cause or the receiving charity, as applicable. Use of the Platform is governed by these Terms. All references to the Site in these Terms applies to your use of the Site itself and also to any use of the Platform if you create an Account and use the functionality provided via the Site.</p></section><section class="pp-sec rv" id="registration" style="--c:#B6F5FF"><h2><span class="n" aria-hidden="true">03</span>Registration</h2><p>To use certain features of the Site, you will need to create an account (“Account”). You may do so by creating an Account at the Site by providing Personal Information, which is defined in and governed by our privacy policy, available by clicking <a href="../privacy-policy/">here</a>. You agree to provide accurate Personal Information and to update the Personal Information as necessary to keep it accurate. You will not allow others to use your Account. You agree to notify Propeller immediately of any unauthorized use of your Account.</p></section><section class="pp-sec rv" id="ownership" style="--c:#5FE9FD"><h2><span class="n" aria-hidden="true">04</span>Ownership</h2><p>Unless otherwise noted, all text, content and documents available via the Site, including, any videos, names, logos, trademarks, service marks, brand identities, characters, trade names, graphics, designs, copyrights, trade dress, or other intellectual property appearing in and used to operate the Sites, and the organization, compilation, look and feel, illustrations, artwork, videos, music, software and other works on the Site (the “Content”) are owned by Propeller or used with permission or under license from a third party (each an “Owner”), and are protected under copyright, trademark and other intellectual property and proprietary rights laws. As between Propeller and you, all right, title and interest in and to the Content will at all times remain with Propeller and/or the Owners. All brand names, product names, titles, slogans, logos, or service names and other marks used on the Site, are registered and/or common law trade names, trademarks or service marks of Propeller or the applicable Owner</p></section><section class="pp-sec rv" id="sweepstakes" style="--c:#C3FAD4"><h2><span class="n" aria-hidden="true">05</span>Sweepstakes</h2><p>From time to time, Propeller may offer certain sweepstakes and Sweepstakes on the Site (“Sweepstakes”). All Sweepstakes are subject to the Official Rules published at the Site, as such may be amended or changed from time to time (the “Rules”). You may always enter any Promotion for free by following the rules for free entry described in the Official Rules. In addition, you may also submit additional bonus entries using Points. These entries are in addition to any Points you may earn and you will never be required to redeem points or provide any other consideration as the sole means of entering a Promotion.</p></section><section class="pp-sec rv" id="points" style="--c:#DAF9FE"><h2><span class="n" aria-hidden="true">06</span>Points</h2><p>Users earn Points on the Platform by participating in certain activities. All users can redeem Points for additional entries to sweepstakes after their initial free entry. Propeller Premier members can also redeem Points for member rewards offered through the Platform. Because Propeller is all about staying active and engaged on important causes, unused Points accrued in your Account will expire and be removed from your Account one (1) year after your last login to the Site. This does not apply to Premier Members. As long as your Premier Memership is active your points will not expire. You can view and track your available point balance at <a href="https://www.propeller.la/user/dashboard">propeller.la/user/dashboard</a>.</p><p>Points are not your property. You can’t transfer points to any other person or program account. Additionally, points can’t be transferred by operation of law, such as by inheritance, in bankruptcy or in connection with a divorce. Points earned have no cash value. Propeller reserves the right, at its sole discretion, to revoke or remove points from any account if we determine that points were accrued through methods that are inconsistent with the fair and intended use of the platform, including but not limited to cheating, manipulating the platform, or engaging in any other activities that undermine the spirit of engagement and fairness on which Propeller is built.</p></section><section class="pp-sec rv" id="propeller-premier" style="--c:#8DEEFD"><h2><span class="n" aria-hidden="true">07</span>Propeller Premier</h2><p>Propeller Premier is a paid membership program governed by the <a href="../premier-membership-terms/">Propeller Premier Membership Terms</a>, which you agree to when you enroll. If these Terms conflict with the Propeller Premier Membership Terms on a Premier-specific matter, the Propeller Premier Membership Terms control.</p></section><section class="pp-sec rv" id="shipping-delivery-and-lost-or-stolen-packages" style="--c:#A4F6BE"><h2><span class="n" aria-hidden="true">08</span>Shipping, Delivery, and Lost or Stolen Packages</h2><p><b>Delivery estimates.</b> Each reward’s page lists an estimated delivery window. Delivery times vary by item, so if your order includes more than one reward, they may arrive separately and on different schedules. Estimated delivery times are not guaranteed. Please allow the full estimated delivery window for each item before contacting us about its status.</p><p><b>Reporting deadline.</b> If an item has not arrived, you must contact us at <a href="mailto:hello@propeller.la">hello@propeller.la</a> within 14 days after the end of that item’s estimated delivery window. If no estimate is listed on the reward page, please contact us within 30 days of your order date. Claims reported within these timeframes will be reviewed, and where appropriate we will arrange a replacement. We cannot offer replacements for claims reported after the deadline.</p><p><b>Risk of loss.</b> Title and risk of loss for your order pass to you when the carrier marks the package as delivered to the shipping address you provided. We are not responsible for packages that are lost, stolen, or damaged after the carrier confirms delivery.</p><p><b>Shipping address.</b> You are responsible for providing a complete and accurate shipping address. We are not responsible for orders delivered to an incorrect or incomplete address provided at checkout. Reshipment of these orders may require a new purchase at the standard price.</p></section><section class="pp-sec rv" id="sms-terms-and-conditions" style="--c:#B6F5FF"><h2><span class="n" aria-hidden="true">09</span>SMS Terms and Conditions</h2><ol><li>By texting a keyword to short code 99126 or to 877-650-0834, you consent to receive one or more automated texts at the phone number from which you texted.</li><li>We will not be liable for any delays in the receipt of any SMS messages as delivery is subject to effective transmission from your mobile service operator. SMS MESSAGE SERVICES ARE PROVIDED ON AN “AS IS” BASIS, AND WE MAKE NO WARRANTY, EXPRESS OR IMPLIED, AND ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR PARTICULAR PURPOSE, ARE HEREBY EXPRESSLY DISCLAIMED.</li><li>Data obtained from you in connection with this SMS service may include your cell phone number, your carrier’s name, and the date, time and content of your messages, as well as other information that you provide. We may use this information to contact you and to provide the services you request from us.</li><li>By subscribing, you consent to receive up to 4 recurring text messages including alerts and updates each month.</li><li>By subscribing or otherwise using the service, you acknowledge and agree that we will have the right to change and/or terminate the service at any time, with or without cause and/or advance notice.</li><li>To cancel your SMS subscriptions, text STOP to 99126 or 877-650-0834 in reply to a text message you receive. You may receive a subsequent message confirming your opt-out request.</li><li>For additional help, text HELP to 99126 or 877-650-0834 in reply to a text message you receive.</li><li>Message and Data Rates May Apply.</li><li>T-Mobile® is not liable for delayed or undelivered messages.</li><li>United States Participating Carriers Include AT&amp;T, T-Mobile®, Verizon Wireless, Sprint, Boost, U.S. Cellular®, MetroPCS®, InterOp, Cellcom, C Spire Wireless, Cricket, Virgin Mobile and others.</li><li><b>SMS Program Availability:</b> Currently, the SMS Program is only available to residents of the United States. You understand and acknowledge that you may not sign up for, access, or attempt to access or use the Program from countries outside of the U.S. You agree to abide by U.S. and other applicable export control laws and not to transfer, by electronic transmission or otherwise, any content or software subject to restrictions under such laws to a national destination or person prohibited under such laws.</li></ol><p><b>Questions / Support:</b> You can contact us at <a href="mailto:hello@propeller.la">hello@propeller.la</a> at any time, from your mobile phone, send a text message with the word “HELP” to 99126 or 877-650-0834.</p></section><section class="pp-sec rv" id="content-from-you" style="--c:#5FE9FD"><h2><span class="n" aria-hidden="true">10</span>Content From You</h2><p>In the course of using the Site you may post, receive or transmit certain text, images, data, comments, videos, (“User Content”). You hereby grant to Propeller the nonexclusive, fully paid, perpetual, irrevocable, royalty-free, transferable, assignable, sublicensable, worldwide license to perform, display, modify, translate, distribute, reproduce, transcribe and provide access to such User Content as necessary to operate the Site, subject always to the provisions of Propeller’s <a href="../privacy-policy/">Privacy Policy</a>. You represent and warrant that: (i) you own the User Content transmitted or otherwise have the right to grant the licenses set forth in this section, and (ii) the User Content does not violate the privacy rights, publicity rights, copyright rights, intellectual property rights, or any other rights of any person, and (iii) the transmitting of User Content does not result in a breach of any contract between you and a third party. You agree to pay for all royalties, fees and any other monies owing any person by reason of any User Content transmitted. You represent and warrant that you will not transmit User Content that is considered Prohibited Content. “Prohibited Content” includes content that: (a) is obscene, patently offensive, or promotes racism, bigotry, hatred or physical harm of any kind against any group or individual; (b) harasses or advocates harassment of another person; (c) involves the transmission of “phishing” emails, “junk mail”, “chain letters”, or unsolicited mass mailing or “spamming”; (d) promotes information that You know is false or misleading or promotes illegal activities or conduct that is abusive, threatening, obscene, defamatory or libelous; (e) promotes an illegal or unauthorized copy of another person’s copyrighted work, such as providing pirated computer programs or links to them, providing information to circumvent manufacturer-installed copy-protect devices, or providing pirated music or links to pirated music files; (f) provides material that exploits people under the age of 18 in a sexual or violent manner, or solicits personal information from anyone under 18; or (g) provides instructional information about illegal activities such as making or buying illegal weapons, violating someone’s privacy, or providing or creating computer viruses. You agree to use the Site in a manner consistent with any and all applicable laws and regulations. Furthermore, the Site is not designed to support or store emergency data or critical information. You represent and warrant that you shall not rely on the Site to record or store such data.</p></section><section class="pp-sec rv" id="content-received-by-you" style="--c:#C3FAD4"><h2><span class="n" aria-hidden="true">11</span>Content Received by You</h2><p>You acknowledge that you may receive content from third parties (including other Users and Causes) through your use of the Site (“Third Party Content”). You agree that Propeller and its licensors shall in no way be liable for any Third Party Content.</p></section><section class="pp-sec rv" id="use-and-restrictions" style="--c:#DAF9FE"><h2><span class="n" aria-hidden="true">12</span>Use and Restrictions</h2><p>You are permitted to use the Site for lawful purposes as provided in these Terms only. Propeller grants you a non-exclusive, limited, personal, non-transferable, revocable license to access and use the Sites and Content, without right to sublicense, under the following conditions: you shall not, without Propeller’s express written consent:</p><ul><li>Copy, retransmit, modify, disseminate, sell, exploit, display, perform, reuse, re-post, broadcast, circulate, or otherwise distribute any part of the Content, in each case for any purpose other than for which the Site is being provided to you;</li><li>Use the Site to conduct or promote any illegal activities;</li><li>Attempt to reverse engineer or jeopardize the correct functioning of the Site, or otherwise attempt to derive the source code of the software (including the tools, methods, processes, and infrastructure) that enables or underlies the Site;</li><li>Attempt to gain access to secured portions of the Site to which you do not possess access rights;</li><li>Upload or transmit any form of virus, worm, Trojan horse, or other malicious code;</li><li>Use the Site to generate unsolicited email advertisements or spam;</li><li>Use the Site to stalk, harass or harm another individual;</li><li>Use any high volume automatic, electronic or manual process to access, search or harvest information from the Site (including without limitation robots, spiders or scripts);</li><li>Interfere in any way with the proper functioning of the Sites or interfere with or disrupt any servers or networks connected to the Site, or disobey any requirements, procedures, policies or regulations of networks connected to the Site;</li><li>Use any robot, spider, other automatic device, or manual process to extract, “screen scrape,” monitor, “mine,” or copy any static or dynamic web page on the Site or the Content contained on any such web page for commercial use without our prior express written permission;</li><li>Impersonate any person or entity, or otherwise misrepresent your affiliation with a person or entity; or</li><li>Mirror or frame the Site or any Content, place pop-up windows over its pages, or otherwise affect the display of its pages.</li><li>Use any tradename, trademark, or brand name of ours in metatags, keywords and/or hidden text;</li><li>Create derivative works from the Content or commercially exploit any part of the Content in any way;</li><li>Use any portion of the Site or the Content in any manner that may give a false or misleading impression, attribution or statement as to us, the Owner or any other third party; or</li><li>Alter, remove or obscure any copyright notice, digital watermarks, proprietary legends or any other notice included in the Content.</li></ul><p>Propeller reserves all other rights. Except as expressly provided herein, nothing on the Sites shall be construed as conferring any license under Propeller’s and/or its Owner’s intellectual property rights, whether by estoppel, implication or otherwise. Notwithstanding anything herein to the contrary, Propeller may revoke any of the foregoing rights and/or your access to the Sites, or any part thereof, including the blocking of your IP Address, at any time without prior notice.</p></section><section class="pp-sec rv" id="access-of-third-party-sites" style="--c:#8DEEFD"><h2><span class="n" aria-hidden="true">13</span>Access of Third-party Sites</h2><p>From time to time the Site may access third party content sites (“Third Party Sites”) in order to access your content. In order to do so, the Site may request the username and/or password for such Third Party Site. You warrant that you have the authority to provide the Site such information and hereby grant Propeller the right to use such information to access your content. Propeller does not guarantee that any such access will continue or be uninterrupted.</p></section><section class="pp-sec rv" id="no-archive" style="--c:#A4F6BE"><h2><span class="n" aria-hidden="true">14</span>No Archive</h2><p>This Site is not and shall not function as an archive. Propeller shall have no liability to you or any other person for loss, damage, or destruction to your information, including any utility bills, usage information or similar. You shall be solely responsible for maintaining independent archival and backup copies of your information.</p></section><section class="pp-sec rv" id="united-states-only" style="--c:#B6F5FF"><h2><span class="n" aria-hidden="true">15</span>United States Only</h2><p>By using the Site, you agree and acknowledge that it is hosted in the United States. If you are attempting to access the Site from a physical location within the European Union, Asia, or any other region with laws or regulations governing Personal Information collection, use, and disclosure that differ from United States laws, please be advised that through your continued use of this Site, which is governed by U.S. law, these Terms, and the Propeller Privacy Policy, you are transferring your personal information to the United States and you consent to (1) such transfer, (2) the application of the laws of the United States and/or the State of California with respect to any dispute arising from or related to the Privacy Policy and/or your use of the Site, other than such rules, regulations, case law, and/or international treaties that would result in the application of the laws of a jurisdiction other than the United States or the State of California, and (c) the exclusive jurisdiction of the courts of the United States and the State of California. Any claim or dispute between you and Propeller that arises in whole or in part from your use of the Site or in connection with the Privacy Policy shall be decided exclusively by a court of competent jurisdiction located in California, U.S.A. Each party hereby agrees that such court shall have in personam jurisdiction and venue with respect to such party, and each party hereby submits to the in personam jurisdiction and venue of such courts and waives any objection based on inconvenient forum. Propeller makes no representations that the Site is appropriate or available for use in other locations. Those who access or use the Site from other jurisdictions do so at their own volition and are responsible for compliance with local law.</p></section><section class="pp-sec rv" id="disclaimers" style="--c:#5FE9FD"><h2><span class="n" aria-hidden="true">16</span>Disclaimers</h2><p>Without limiting the foregoing, the Content and all other features on the SITE are provided to you “AS IS” and “AS AVAILABLE” without warranty of any kind with respect to the site and/or Content, either express or implied, including but not limited to, fitness for a particular purpose, title, or non-infringement. Should applicable law not permit the foregoing exclusion of express or implied warranties, then Propeller hereby grants the minimum express or implied warranty required by such applicable law. No advice or information, whether oral or written, obtained by you from Propeller, its employees, agents, suppliers or any other persons shall create any warranty, representation or guarantee not expressly stated in this section. Additionally, Propeller does not make any warranties that the site will be uninterrupted, secure or error free or that your use of the site will meet your expectations, or that the site, Content, or any portion thereof, is correct, accurate, or reliable. Propeller reserves the right to change any part of the site at anytime without notice.</p></section><section class="pp-sec rv" id="limitation-of-liability" style="--c:#C3FAD4"><h2><span class="n" aria-hidden="true">17</span>Limitation of Liability</h2><p>Your use of the site is at your own risk. Neither Propeller, its affiliates, nor any of their respective officers, directors, agents or other representatives will be liable for any damages, direct, indirect, incidental, consequential, special, or punitive, including, without limitation, loss of data, income, profit or goodwill, loss of or damage to property and claims of third parties arising out of your access to or use of the site or arising out of any action taken in response to or as a result of any Content or other information available on the site, however caused, whether based on breach of contract, tort (including negligence), proprietary rights infringement, product liability or otherwise. The foregoing shall apply even if Propeller was advised of the possibility of such damages. If you become dissatisfied in any way with the site, THESE Terms, or ITS Privacy Policy, your sole and exclusive remedy is to stop your use of the site. You hereby waive any and all claims against Propeller and its affiliates, agents, representatives and licensors arising out of your use of the site. Because some states do not allow the disclaimer of implied warranties or the exclusion or limitation of certain types of damages, these provisions may not apply to you. If any portion of this limitation on liability is found to be invalid or unenforceable for any reason, then the aggregate liability of Propeller and its affiliates shall not exceed one hundred dollars ($100.) The limitation of liability herein is a fundamental element of the basis of the bargain and reflects a fair allocation of risk. The site would not be provided without such limitations and you agree that the limitations and exclusions of liability, disclaimers and exclusive remedies specified herein will survive even if found to have failed in their essential purpose.</p></section><section class="pp-sec rv" id="digital-millennium-copyright-act" style="--c:#DAF9FE"><h2><span class="n" aria-hidden="true">18</span>Digital Millennium Copyright Act</h2><p>Propeller is committed to respecting and protecting the legal rights of copyright owners. As such, Propeller adheres to the following notice and take down policy, in full compliance with Section 512(c)(3) of the DMCA (17 U.S.C. § 512 et seq.). If you believe any of the Content infringes upon your intellectual property rights, please submit a notification alleging such infringement (hereafter a “DMCA Takedown Notice”). To be valid, a DMCA Takedown Notice must (i) be provided to Propeller’s designated agent, (“Copyright Agent”), as set forth below, and (ii) include the following:</p><ul><li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed;</li><li>Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single notification, a representative list of such works;</li><li>Identification of the material claimed to be infringing or to be the subject of infringing activity and that is to be removed or access disabled and information reasonably sufficient to permit the service provider to locate the material;</li><li>Information reasonably sufficient to permit the service provider to contact you, such as an address, telephone number, and, if available, an electronic mail;</li><li>A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and</li><li>A statement that, under penalty of perjury, the information in the notification is accurate and you are authorized to act on behalf of the owner of the exclusive right that is allegedly infringed.</li></ul><p>Propeller’s Copyright Agent to receive DMCA Takedown Notices is: email: <a href="mailto:support@propeller.la">support@propeller.la</a>. For clarity, only DMCA Takedown Notices should go to the Copyright Agent; any other feedback, comments, online purchases or other communications should be directed to the applicable customer service links posted on the Site. You acknowledge that for Propeller to be authorized to takedown any content, your DMCA Takedown Notice must comply with all of the requirements of this Section.</p></section><section class="pp-sec rv" id="indemnity" style="--c:#8DEEFD"><h2><span class="n" aria-hidden="true">19</span>Indemnity</h2><p>You agree to defend, indemnify and hold harmless Propeller, its officers, directors, employees and agents, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees) arising from: (a) your use of and access to the Site; (b) your violation of any term of this Agreement; or (c) your violation of any third party right, including without limitation any copyright, property, or privacy right. This indemnification obligation will survive this Agreement.</p></section><section class="pp-sec rv" id="trademarks-and-copyright" style="--c:#A4F6BE"><h2><span class="n" aria-hidden="true">20</span>Trademarks and Copyright</h2><p>Propeller and its respective designs and logos are copyright of Propeller. All other trademarks and/or service marks are the property of their respective owners.</p></section><section class="pp-sec rv" id="amendments" style="--c:#B6F5FF"><h2><span class="n" aria-hidden="true">21</span>Amendments</h2><p>Propeller may from time to time modify this Agreement and post a copy of the amended Agreement at the Site. If You do not agree to (or cannot comply with) the Agreement as amended, Your only remedy is to stop using the Site. You will be deemed to have accepted the Agreement as amended if You continue to use the Site after any amendments are posted.</p></section><section class="pp-sec rv" id="miscellaneous" style="--c:#5FE9FD"><h2><span class="n" aria-hidden="true">22</span>Miscellaneous</h2><p>This Agreement, Propeller’s Master Agreement, and, for Propeller Premier members, the <a href="../premier-membership-terms/">Propeller Premier Membership Terms</a> together constitute the entire agreement between the parties with respect to the use of the Site and Platform and supersede all prior or contemporaneous understandings, communications or agreements, written or oral, regarding such subject matter. If any provision of this Agreement is held to be unenforceable for any reason, such provision shall be reformed only to the extent necessary to make it enforceable and the remainder of the Agreement shall be in full force and effect.</p></section></div>
+      <div class="pp-q rv"><strong>Questions about these terms?</strong><a class="btn" href="mailto:hello@propeller.la">Email hello@propeller.la</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap">
+  <a href="../this-is-propeller/">About us</a><a href="../how-it-works.html">How it works</a><a href="../rewards.html">Experiences</a><a href="https://www.propeller.la/causes">Causes</a><a href="../dashboard.html">Actions</a><a href="../rewards.html">Rewards</a><a href="../winners.html">Winner stories</a><a href="../support/">Support</a><a href="../clubs.html">Clubs</a><a href="../privacy-policy/">Privacy policy</a><a href="../terms-of-service/">Terms of service</a><a href="../official-rules/">Official rules</a><a href="../premier-membership-terms/">Premier membership terms</a>
+  <small>©2026 Propeller</small>
+</div></footer>
+<script>
+(()=>{
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const els=document.querySelectorAll('.rv');
+if(reduced||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));}
+else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.05});els.forEach(e=>io.observe(e));}
+const links=[...document.querySelectorAll('.pp-toc a')],secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+let q=false;function upd(){q=false;let a=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.35)a=i;});links.forEach((l,i)=>l.classList.toggle('on',i===a));}
+addEventListener('scroll',()=>{if(!q){q=true;requestAnimationFrame(upd);}},{passive:true});upd();
+})();
+</script>
+
+</body>
+</html>
